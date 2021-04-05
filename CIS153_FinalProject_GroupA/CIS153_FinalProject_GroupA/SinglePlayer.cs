@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CIS153_FinalProject_GroupA
 {
-    public partial class Form1 : Form
+    public partial class SinglePlayer : Form
     {
-        public Form1()
+        public SinglePlayer()
         {
             InitializeComponent();
         }
