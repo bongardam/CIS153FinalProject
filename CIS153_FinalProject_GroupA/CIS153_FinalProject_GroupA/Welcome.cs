@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace CIS153_FinalProject_GroupA
 {
+    // Brendan Czekaj
     public partial class Welcome : Form
     {
         public Welcome()
