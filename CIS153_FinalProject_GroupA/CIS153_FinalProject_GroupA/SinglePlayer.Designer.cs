@@ -28,19 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.TESTONLY = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // TESTONLY
+            // 
+            this.TESTONLY.AutoSize = true;
+            this.TESTONLY.Location = new System.Drawing.Point(255, 82);
+            this.TESTONLY.Name = "TESTONLY";
+            this.TESTONLY.Size = new System.Drawing.Size(99, 13);
+            this.TESTONLY.TabIndex = 0;
+            this.TESTONLY.Text = "Single TEST ONLY";
             // 
             // SinglePlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TESTONLY);
             this.Name = "SinglePlayer";
             this.Text = "SinglePlayer";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label TESTONLY;
     }
 }

@@ -12,9 +12,28 @@ namespace CIS153_FinalProject_GroupA
 {
     public partial class SinglePlayer : Form
     {
+        Welcome welcome;
+
         public SinglePlayer()
         {
             InitializeComponent();
+        }
+
+        public new void CenterToScreen()
+        {
+            base.CenterToScreen();
+        }
+
+        public SinglePlayer(Welcome wel)
+        {
+            InitializeComponent();
+            CenterToScreen();
+            welcome = wel;
+        }
+
+        public void passedForm(Welcome wel)
+        {
+            welcome = wel;
         }
     }
 }

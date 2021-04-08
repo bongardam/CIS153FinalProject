@@ -12,9 +12,29 @@ namespace CIS153_FinalProject_GroupA
 {
     public partial class Stats : Form
     {
+        private Welcome welcome;
+
         public Stats()
         {
             InitializeComponent();
+            CenterToScreen();
+        }
+
+        public new void CenterToScreen()
+        {
+            base.CenterToScreen();
+        }
+
+        public Stats(Welcome wel)
+        {
+            InitializeComponent();
+            CenterToScreen();
+            welcome = wel;
+        }
+
+        public void passedForm(Welcome wel)
+        {
+            welcome = wel;
         }
     }
 }

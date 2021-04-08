@@ -1,6 +1,6 @@
 ﻿namespace CIS153_FinalProject_GroupA
 {
-    partial class TwoPlayer
+    partial class GameOver
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TESTONLY = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // TESTONLY
-            // 
-            this.TESTONLY.AutoSize = true;
-            this.TESTONLY.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.TESTONLY.Location = new System.Drawing.Point(351, 219);
-            this.TESTONLY.Name = "TESTONLY";
-            this.TESTONLY.Size = new System.Drawing.Size(91, 13);
-            this.TESTONLY.TabIndex = 1;
-            this.TESTONLY.Text = "Two TEST ONLY";
-            // 
-            // TwoPlayer
+            // GameOver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.TESTONLY);
-            this.Name = "TwoPlayer";
-            this.Text = "TwoPlayer";
+            this.Name = "GameOver";
+            this.Text = "GameOver";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label TESTONLY;
     }
 }
