@@ -36,5 +36,10 @@ namespace CIS153_FinalProject_GroupA
         {
             welcome = wel;
         }
+
+        private void Stats_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

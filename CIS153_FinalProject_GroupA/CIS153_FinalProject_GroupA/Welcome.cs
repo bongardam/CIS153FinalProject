@@ -43,6 +43,11 @@ namespace CIS153_FinalProject_GroupA
             loadStatForm();
         }
 
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         public void loadOneForm()
         {
             SinglePlayer formToLoad = new SinglePlayer(this);

@@ -1,4 +1,6 @@
-﻿namespace CIS153_FinalProject_GroupA
+﻿using System.Windows.Forms;
+
+namespace CIS153_FinalProject_GroupA
 {
     partial class SinglePlayer
     {
@@ -26,6 +28,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        /// 
+
         private void InitializeComponent()
         {
             this.TESTONLY = new System.Windows.Forms.Label();
@@ -34,7 +38,7 @@
             // TESTONLY
             // 
             this.TESTONLY.AutoSize = true;
-            this.TESTONLY.Location = new System.Drawing.Point(255, 82);
+            this.TESTONLY.Location = new System.Drawing.Point(295, 56);
             this.TESTONLY.Name = "TESTONLY";
             this.TESTONLY.Size = new System.Drawing.Size(99, 13);
             this.TESTONLY.TabIndex = 0;
@@ -44,10 +48,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(697, 751);
             this.Controls.Add(this.TESTONLY);
             this.Name = "SinglePlayer";
             this.Text = "SinglePlayer";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SinglePlayer_FormClosed);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.SinglePlayer_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
 

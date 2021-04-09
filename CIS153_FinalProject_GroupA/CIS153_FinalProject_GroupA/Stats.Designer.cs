@@ -44,10 +44,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.TESTONLY);
             this.Name = "Stats";
             this.Text = "Stats";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Stats_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
