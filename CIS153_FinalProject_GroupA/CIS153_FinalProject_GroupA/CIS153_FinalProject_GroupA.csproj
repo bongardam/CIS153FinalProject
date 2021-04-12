@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Cell.cs" />
     <Compile Include="Board.cs" />
+    <Compile Include="PlayerStats.cs" />
     <Compile Include="GameOver.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +106,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -118,6 +120,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayerOneStats.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayerTwoStats.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CompStats.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
