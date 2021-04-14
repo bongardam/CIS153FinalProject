@@ -16,14 +16,18 @@ namespace CIS153_FinalProject_GroupA
     {
         //class variables
         //stat array variables
-        public List<PlayerStats> playerStats = new List<PlayerStats>();
+        public List<POStats> playerOneStats = new List<POStats>();
+        public List<PTStats> playerTwoStats = new List<PTStats>();
+        public List<PCStats> playerCompStats = new List<PCStats>();
 
 
         public Welcome()
         {
             InitializeComponent();
             CenterToScreen();
-            readTextFiles();
+            readTextFilePO();
+            readTextFilePT();
+            readTextFilePC();
         }
 
         public new void CenterToScreen()
@@ -74,10 +78,10 @@ namespace CIS153_FinalProject_GroupA
 
         //load text files for stats
 
-        public void readTextFiles()
+        public void readTextFilePO()
         {
             string fileContent = "";
-            playerStats = new List<PlayerStats>();
+            playerOneStats = new List<POStats>();
 
             
             try
@@ -92,12 +96,94 @@ namespace CIS153_FinalProject_GroupA
 
             StreamReader file = new StreamReader("../../Resources/CompStats.txt");
             string line = file.ReadLine();
-            //int statPlayerOneMoves;
-            //int statPlayerOneGames;
-            //int statPlayerOneOutcome;
-            //int statPlayerTwoMoves;
-            //int statPlayerTwoGames;
-            //int statPlayerTwoOutcome;
+            int statPlayerOneMoves;
+            int statPlayerOneGames;
+            int statPlayerOneOutcome;
+            
+            int comma;
+            char delim = ',';
+
+            Stats newPlayerStats;
+
+            while (line != null)
+            {
+                comma = line.IndexOf(delim);
+                statPlayerOneMoves = int.Parse(line.Substring(0, comma));
+                line = line.Substring(comma + 1);
+                statPlayerOneGames = int.Parse(line.Substring(0, comma));
+                line = line.Substring(comma + 1);
+                statPlayerOneOutcome = int.Parse(line.Substring(0, comma));
+
+                newPlayerStats = new PlayerOneStats(statPlayerOneMoves, statPlayerOneGames, statPlayerOneOutcome);
+                playerStats.Add(newPlayerOneStats);
+                line = file.ReadLine();
+            }
+
+        }
+
+        public void readTextFilePT()
+        {
+            string fileContent = "";
+            playerStats = new List<POStats>();
+
+
+            try
+            {
+                fileContent = CIS153_FinalProject_GroupA.Properties.Resources.CompStats;
+                Console.WriteLine("Success");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error loading File: " + e.Message);
+            }
+
+            StreamReader file = new StreamReader("../../Resources/CompStats.txt");
+            string line = file.ReadLine();
+            int statplayertwomoves;
+            int statplayertwogames;
+            int statplayertwooutcome;
+            
+
+            int comma;
+            char delim = ',';
+
+            Stats newPlayerStats;
+
+            while (line != null)
+            {
+                comma = line.IndexOf(delim);
+                statCompMoves = int.Parse(line.Substring(0, comma));
+                line = line.Substring(comma + 1);
+                statCompGames = int.Parse(line.Substring(0, comma));
+                line = line.Substring(comma + 1);
+                statCompOutcome = int.Parse(line.Substring(0, comma));
+
+                newPlayerStats = new PlayerStats(statCompMoves, statCompGames, statCompOutcome);
+                playerStats.Add(newPlayerStats);
+                line = file.ReadLine();
+            }
+
+        }
+
+        public void readTextFilePC()
+        {
+            string fileContent = "";
+            playerStats = new List<POStats>();
+
+
+            try
+            {
+                fileContent = CIS153_FinalProject_GroupA.Properties.Resources.CompStats;
+                Console.WriteLine("Success");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error loading File: " + e.Message);
+            }
+
+            StreamReader file = new StreamReader("../../Resources/CompStats.txt");
+            string line = file.ReadLine();
+           
             int statCompMoves;
             int statCompGames;
             int statCompOutcome;
@@ -105,21 +191,21 @@ namespace CIS153_FinalProject_GroupA
             int comma;
             char delim = ',';
 
-            //Stats newPlayerStats;
+            Stats newPlayerStats;
 
-            //while (line != null)
-            //{
-            //    comma = line.IndexOf(delim);
-            //    statCompMoves = int.Parse(line.Substring(0, comma));
-            //    line = line.Substring(comma + 1);
-            //    statCompGames = int.Parse(line.Substring(0, comma));
-            //    line = line.Substring(comma + 1);
-            //    statCompOutcome = int.Parse(line.Substring(0, comma));
+            while (line != null)
+            {
+                comma = line.IndexOf(delim);
+                statCompMoves = int.Parse(line.Substring(0, comma));
+                line = line.Substring(comma + 1);
+                statCompGames = int.Parse(line.Substring(0, comma));
+                line = line.Substring(comma + 1);
+                statCompOutcome = int.Parse(line.Substring(0, comma));
 
-            //    newPlayerStats = new PlayerStats(statCompMoves, statCompGames, statCompOutcome);
-            //    playerStats.Add(newPlayerStats);
-            //    line = file.ReadLine();
-            //}
+                newPlayerStats = new PlayerStats(statCompMoves, statCompGames, statCompOutcome);
+                playerStats.Add(newPlayerStats);
+                line = file.ReadLine();
+            }
 
         }
 
