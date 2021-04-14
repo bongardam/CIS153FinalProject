@@ -46,7 +46,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(697, 751);
+            this.ClientSize = new System.Drawing.Size(727, 751);
             this.Controls.Add(this.TESTONLY);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "TwoPlayer";

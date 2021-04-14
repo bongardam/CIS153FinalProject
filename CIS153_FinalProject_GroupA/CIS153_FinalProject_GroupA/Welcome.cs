@@ -105,21 +105,21 @@ namespace CIS153_FinalProject_GroupA
             int comma;
             char delim = ',';
 
-            Stats newPlayerStats;
+            //Stats newPlayerStats;
 
-            while (line != null)
-            {
-                comma = line.IndexOf(delim);
-                statCompMoves = int.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
-                statCompGames = int.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
-                statCompOutcome = int.Parse(line.Substring(0, comma));
+            //while (line != null)
+            //{
+            //    comma = line.IndexOf(delim);
+            //    statCompMoves = int.Parse(line.Substring(0, comma));
+            //    line = line.Substring(comma + 1);
+            //    statCompGames = int.Parse(line.Substring(0, comma));
+            //    line = line.Substring(comma + 1);
+            //    statCompOutcome = int.Parse(line.Substring(0, comma));
 
-                newPlayerStats = new PlayerStats(statCompMoves, statCompGames, statCompOutcome);
-                playerStats.Add(newPlayerStats);
-                line = file.ReadLine();
-            }
+            //    newPlayerStats = new PlayerStats(statCompMoves, statCompGames, statCompOutcome);
+            //    playerStats.Add(newPlayerStats);
+            //    line = file.ReadLine();
+            //}
 
         }
 

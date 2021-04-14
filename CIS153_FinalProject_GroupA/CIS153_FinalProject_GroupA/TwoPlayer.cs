@@ -61,8 +61,8 @@ namespace CIS153_FinalProject_GroupA
             Brush blueBrush = new SolidBrush(Color.Blue); // BC: just a brush
             Brush whiteBrush = new SolidBrush(Color.White); // BC: another brush
 
-            Rectangle topRect = new Rectangle(0, 0, 700, 145); // BC: placeholder rectangle I will
-            g.FillRectangle(whiteBrush, topRect);              //     finish up next week
+            //Rectangle topRect = new Rectangle(0, 0, 800, 145); // BC: placeholder rectangle I will
+            //g.FillRectangle(whiteBrush, topRect);              //     finish up next week
 
             // BC: The size of the shapes are relative to the column and row
             // For example: row 1, column 3 would have
@@ -71,7 +71,7 @@ namespace CIS153_FinalProject_GroupA
             {
                 for (int r = 0; r < rowCount; r++)
                 {                                // xPos, yPos, width, height
-                    Rectangle rect = new Rectangle(c*101, r*101+151, 90, 90);
+                    Rectangle rect = new Rectangle(c*101+15, r*101+151, 90, 90);
                     g.FillRectangle(blueBrush, rect);
                     g.FillEllipse(whiteBrush, rect);
                 }
