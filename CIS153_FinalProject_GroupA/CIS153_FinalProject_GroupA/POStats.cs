@@ -11,13 +11,15 @@ namespace CIS153_FinalProject_GroupA
         int playerOneMoves;
         int playerOneGames;
         int playerOneOutcome;
+        int playerOneTie;
         
 
-        public POStats(int pm, int pg, int po)
+        public POStats(int pm, int pg, int po, int pt)
         {
             playerOneMoves = pm;
             playerOneGames = pg;
             playerOneOutcome = po;
+            playerOneTie = pt;
         }
 
         public int getPlayerOneMoves()
@@ -33,6 +35,11 @@ namespace CIS153_FinalProject_GroupA
         public int getPlayerOneOutcome()
         {
             return playerOneOutcome;
+        }
+
+        public int getPlayerOneTie()
+        {
+            return playerOneTie;
         }
     }
 }

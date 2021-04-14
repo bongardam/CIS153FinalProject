@@ -28,27 +28,124 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TESTONLY = new System.Windows.Forms.Label();
+            this.lbl_gameStatsHeader = new System.Windows.Forms.Label();
+            this.lbl_gamesPlayedTitle = new System.Windows.Forms.Label();
+            this.lbl_gamesWonTitle = new System.Windows.Forms.Label();
+            this.lbl_gamesTiedTitle = new System.Windows.Forms.Label();
+            this.lbl_gamesRatioTitle = new System.Windows.Forms.Label();
+            this.lbl_gamesPlayedDisplay = new System.Windows.Forms.Label();
+            this.lbl_gamesPercentDisplay = new System.Windows.Forms.Label();
+            this.lbl_gamesTiedDisplay = new System.Windows.Forms.Label();
+            this.lbl_gamesWonDisplay = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // TESTONLY
+            // lbl_gameStatsHeader
             // 
-            this.TESTONLY.AutoSize = true;
-            this.TESTONLY.Location = new System.Drawing.Point(351, 219);
-            this.TESTONLY.Name = "TESTONLY";
-            this.TESTONLY.Size = new System.Drawing.Size(94, 13);
-            this.TESTONLY.TabIndex = 1;
-            this.TESTONLY.Text = "Stats TEST ONLY";
+            this.lbl_gameStatsHeader.AutoSize = true;
+            this.lbl_gameStatsHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_gameStatsHeader.Location = new System.Drawing.Point(237, 30);
+            this.lbl_gameStatsHeader.Name = "lbl_gameStatsHeader";
+            this.lbl_gameStatsHeader.Size = new System.Drawing.Size(332, 55);
+            this.lbl_gameStatsHeader.TabIndex = 0;
+            this.lbl_gameStatsHeader.Text = "GAME STATS";
+            // 
+            // lbl_gamesPlayedTitle
+            // 
+            this.lbl_gamesPlayedTitle.AutoSize = true;
+            this.lbl_gamesPlayedTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_gamesPlayedTitle.Location = new System.Drawing.Point(12, 165);
+            this.lbl_gamesPlayedTitle.Name = "lbl_gamesPlayedTitle";
+            this.lbl_gamesPlayedTitle.Size = new System.Drawing.Size(152, 25);
+            this.lbl_gamesPlayedTitle.TabIndex = 4;
+            this.lbl_gamesPlayedTitle.Text = "Games Played";
+            // 
+            // lbl_gamesWonTitle
+            // 
+            this.lbl_gamesWonTitle.AutoSize = true;
+            this.lbl_gamesWonTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_gamesWonTitle.Location = new System.Drawing.Point(12, 221);
+            this.lbl_gamesWonTitle.Name = "lbl_gamesWonTitle";
+            this.lbl_gamesWonTitle.Size = new System.Drawing.Size(130, 25);
+            this.lbl_gamesWonTitle.TabIndex = 5;
+            this.lbl_gamesWonTitle.Text = "Games Won";
+            // 
+            // lbl_gamesTiedTitle
+            // 
+            this.lbl_gamesTiedTitle.AutoSize = true;
+            this.lbl_gamesTiedTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_gamesTiedTitle.Location = new System.Drawing.Point(12, 281);
+            this.lbl_gamesTiedTitle.Name = "lbl_gamesTiedTitle";
+            this.lbl_gamesTiedTitle.Size = new System.Drawing.Size(128, 25);
+            this.lbl_gamesTiedTitle.TabIndex = 6;
+            this.lbl_gamesTiedTitle.Text = "Games Tied";
+            // 
+            // lbl_gamesRatioTitle
+            // 
+            this.lbl_gamesRatioTitle.AutoSize = true;
+            this.lbl_gamesRatioTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_gamesRatioTitle.Location = new System.Drawing.Point(12, 334);
+            this.lbl_gamesRatioTitle.Name = "lbl_gamesRatioTitle";
+            this.lbl_gamesRatioTitle.Size = new System.Drawing.Size(166, 25);
+            this.lbl_gamesRatioTitle.TabIndex = 7;
+            this.lbl_gamesRatioTitle.Text = "Player/AI Win %";
+            // 
+            // lbl_gamesPlayedDisplay
+            // 
+            this.lbl_gamesPlayedDisplay.AutoSize = true;
+            this.lbl_gamesPlayedDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_gamesPlayedDisplay.Location = new System.Drawing.Point(298, 165);
+            this.lbl_gamesPlayedDisplay.Name = "lbl_gamesPlayedDisplay";
+            this.lbl_gamesPlayedDisplay.Size = new System.Drawing.Size(117, 20);
+            this.lbl_gamesPlayedDisplay.TabIndex = 8;
+            this.lbl_gamesPlayedDisplay.Text = "games played";
+            // 
+            // lbl_gamesPercentDisplay
+            // 
+            this.lbl_gamesPercentDisplay.AutoSize = true;
+            this.lbl_gamesPercentDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_gamesPercentDisplay.Location = new System.Drawing.Point(298, 334);
+            this.lbl_gamesPercentDisplay.Name = "lbl_gamesPercentDisplay";
+            this.lbl_gamesPercentDisplay.Size = new System.Drawing.Size(81, 20);
+            this.lbl_gamesPercentDisplay.TabIndex = 9;
+            this.lbl_gamesPercentDisplay.Text = "games %";
+            // 
+            // lbl_gamesTiedDisplay
+            // 
+            this.lbl_gamesTiedDisplay.AutoSize = true;
+            this.lbl_gamesTiedDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_gamesTiedDisplay.Location = new System.Drawing.Point(298, 281);
+            this.lbl_gamesTiedDisplay.Name = "lbl_gamesTiedDisplay";
+            this.lbl_gamesTiedDisplay.Size = new System.Drawing.Size(94, 20);
+            this.lbl_gamesTiedDisplay.TabIndex = 10;
+            this.lbl_gamesTiedDisplay.Text = "games tied";
+            // 
+            // lbl_gamesWonDisplay
+            // 
+            this.lbl_gamesWonDisplay.AutoSize = true;
+            this.lbl_gamesWonDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_gamesWonDisplay.Location = new System.Drawing.Point(298, 221);
+            this.lbl_gamesWonDisplay.Name = "lbl_gamesWonDisplay";
+            this.lbl_gamesWonDisplay.Size = new System.Drawing.Size(121, 25);
+            this.lbl_gamesWonDisplay.TabIndex = 11;
+            this.lbl_gamesWonDisplay.Text = "games won";
             // 
             // Stats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.TESTONLY);
+            this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.Controls.Add(this.lbl_gamesWonDisplay);
+            this.Controls.Add(this.lbl_gamesTiedDisplay);
+            this.Controls.Add(this.lbl_gamesPercentDisplay);
+            this.Controls.Add(this.lbl_gamesPlayedDisplay);
+            this.Controls.Add(this.lbl_gamesRatioTitle);
+            this.Controls.Add(this.lbl_gamesTiedTitle);
+            this.Controls.Add(this.lbl_gamesWonTitle);
+            this.Controls.Add(this.lbl_gamesPlayedTitle);
+            this.Controls.Add(this.lbl_gameStatsHeader);
             this.Name = "Stats";
             this.Text = "Stats";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Stats_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Stats_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -56,6 +153,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label TESTONLY;
+        private System.Windows.Forms.Label lbl_gameStatsHeader;
+        private System.Windows.Forms.Label lbl_gamesPlayedTitle;
+        private System.Windows.Forms.Label lbl_gamesWonTitle;
+        private System.Windows.Forms.Label lbl_gamesTiedTitle;
+        private System.Windows.Forms.Label lbl_gamesRatioTitle;
+        private System.Windows.Forms.Label lbl_gamesPlayedDisplay;
+        private System.Windows.Forms.Label lbl_gamesPercentDisplay;
+        private System.Windows.Forms.Label lbl_gamesTiedDisplay;
+        private System.Windows.Forms.Label lbl_gamesWonDisplay;
     }
 }

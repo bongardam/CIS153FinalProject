@@ -18,8 +18,7 @@ namespace CIS153_FinalProject_GroupA
         int[,] board = new int[rowCount, columnCount]; // BC: inits our board which we will store the user's moves in 
         public TwoPlayer()
         {
-            InitializeComponent();
-            CenterToScreen();
+            InitializeComponent();            
         }
 
         public new void CenterToScreen()

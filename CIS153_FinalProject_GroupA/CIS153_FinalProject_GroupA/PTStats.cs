@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CIS153_FinalProject_GroupA
 {
-    class PTStats
+    public class PTStats
     {
         int playerTwoMoves;
         int playerTwoGames;
