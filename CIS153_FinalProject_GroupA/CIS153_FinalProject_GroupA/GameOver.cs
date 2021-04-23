@@ -183,7 +183,7 @@ namespace CIS153_FinalProject_GroupA
 
         private void btn_showBoard_Click(object sender, EventArgs e)
         {
-           
+            //move left and show board on right?
         }
     }
 }
