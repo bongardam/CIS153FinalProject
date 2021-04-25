@@ -61,7 +61,17 @@ namespace CIS153_FinalProject_GroupA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 0,0,0.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Blue_9809_2__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Blue-9809-2 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0,0,0,0.
         /// </summary>
         internal static string CompStats {
             get {
@@ -70,7 +80,94 @@ namespace CIS153_FinalProject_GroupA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 0,0,0.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap connect4 {
+            get {
+                object obj = ResourceManager.GetObject("connect4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap connect4logo {
+            get {
+                object obj = ResourceManager.GetObject("connect4logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap connect4logo1 {
+            get {
+                object obj = ResourceManager.GetObject("connect4logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap connect4logo2 {
+            get {
+                object obj = ResourceManager.GetObject("connect4logo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap connect4logo3 {
+            get {
+                object obj = ResourceManager.GetObject("connect4logo3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap connect4logoRESIZE {
+            get {
+                object obj = ResourceManager.GetObject("connect4logoRESIZE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap connect4RESIZE {
+            get {
+                object obj = ResourceManager.GetObject("connect4RESIZE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Multiplayer75Pixels {
+            get {
+                object obj = ResourceManager.GetObject("Multiplayer75Pixels", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 0,0,0,0
+        ///0,0,0,0
+        ///0,0,0,0
+        ///0,0,0,0
+        ///0,0,0,0
+        ///0,0,0,0
+        ///0,0,0,0
+        ///.
         /// </summary>
         internal static string PlayerOneStats {
             get {
@@ -84,6 +181,26 @@ namespace CIS153_FinalProject_GroupA.Properties {
         internal static string PlayerTwoStats {
             get {
                 return ResourceManager.GetString("PlayerTwoStats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap research {
+            get {
+                object obj = ResourceManager.GetObject("research", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap singleplayerOPTION2 {
+            get {
+                object obj = ResourceManager.GetObject("singleplayerOPTION2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

@@ -16,11 +16,11 @@ namespace CIS153_FinalProject_GroupA
     {
         private GameOver gameOver;
 
-
         public Welcome()
         {
             InitializeComponent();
-            
+            pictureBox_logo.Parent = pictureBox_bg;
+            pictureBox_logo.BackColor = Color.Transparent;
             
         }
 

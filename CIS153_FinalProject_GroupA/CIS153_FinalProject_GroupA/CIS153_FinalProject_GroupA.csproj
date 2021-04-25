@@ -142,5 +142,38 @@
   <ItemGroup>
     <None Include="Resources\CompStats.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\singleplayerOPTION2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Multiplayer75Pixels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\research.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue-9809-2 %282%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect4logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect4logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect4logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect4logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect4logoRESIZE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\connect4RESIZE.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
