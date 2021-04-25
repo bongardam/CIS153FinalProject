@@ -94,6 +94,12 @@ namespace CIS153_FinalProject_GroupA
                         )
                          
                     {
+                        //lowercase call of Cell because of uppercase used earlier
+                        foreach (Cell cell in gameBoard)
+                        {
+                            Button b = cell.getButton();
+                            b.Enabled = false;
+                        }
                         MessageBox.Show("Player " + p + "Wins!");
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
@@ -122,6 +128,13 @@ namespace CIS153_FinalProject_GroupA
                         )
 
                     {
+                        //lowercase call of Cell because of uppercase used earlier
+                        foreach(Cell cell in gameBoard)
+                        {
+                            Button b = cell.getButton();
+                            b.Enabled = false;
+                        }
+
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
                 }
@@ -147,6 +160,12 @@ namespace CIS153_FinalProject_GroupA
                         p != 0
                         )
                     {
+                        //lowercase call of Cell because of uppercase used earlier
+                        foreach (Cell cell in gameBoard)
+                        {
+                            Button b = cell.getButton();
+                            b.Enabled = false;
+                        }
                         MessageBox.Show("Player " + p + "Wins!");
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
@@ -173,6 +192,12 @@ namespace CIS153_FinalProject_GroupA
                         p != 0
                         )
                     {
+                        //lowercase call of Cell because of uppercase used earlier
+                        foreach (Cell cell in gameBoard)
+                        {
+                            Button b = cell.getButton();
+                            b.Enabled = false;
+                        }
                         MessageBox.Show("Player " + p + "Wins!");
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
@@ -201,6 +226,12 @@ namespace CIS153_FinalProject_GroupA
                         p != 0
                         )
                     {
+                        //lowercase call of Cell because of uppercase used earlier
+                        foreach (Cell cell in gameBoard)
+                        {
+                            Button b = cell.getButton();
+                            b.Enabled = false;
+                        }
                         MessageBox.Show("Player " + p + "Wins!");
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
@@ -229,6 +260,12 @@ namespace CIS153_FinalProject_GroupA
                         p != 0
                         )
                     {
+                        //lowercase call of Cell because of uppercase used earlier
+                        foreach (Cell cell in gameBoard)
+                        {
+                            Button b = cell.getButton();
+                            b.Enabled = false;
+                        }
                         MessageBox.Show("Player " + p + "Wins!");
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
