@@ -62,112 +62,212 @@ namespace CIS153_FinalProject_GroupA
 
         public void compSingleCheck()
         {
-            bool compTurn = true;
-
-            foreach(Cell Cell in gameBoard)
+            if (getTurn() != 0)
             {
-                int r = Cell.getRow();
-                int c = Cell.getCol();
-                int p = Cell.getPlayer();
 
-                // if it's the computer's turn, and a cell is claimed by player 1
-                if (compTurn == true && p == 1)
+                bool compTurn = true;
+
+                foreach (Cell Cell in gameBoard)
                 {
-                    //check right
-                    try
+                    int r = Cell.getRow();
+                    int c = Cell.getCol();
+                    int p = Cell.getPlayer();
+
+                    // if it's the computer's turn, and a cell is claimed by player 1
+                    if (compTurn == true && p == 1)
                     {
-                        if( gameBoard[r, c + 1].getPlayer() == 0)
+                        //check right
+                        try
                         {
-                            bool looking = true;
-
-                            int col = gameBoard[r, c + 1].getCol();
-
-                            for(int row = numRows - 1; row >= gameBoard[r, c + 1].getRow(); row--)
+                            if (gameBoard[r, c + 1].getPlayer() == 0)
                             {
-                                if (gameBoard[row, c + 1].getPlayer() == 0 && looking == true)
+                                bool looking = true;
+
+                                int col = gameBoard[r, c + 1].getCol();
+
+                                for (int row = numRows - 1; row >= gameBoard[r, c + 1].getRow(); row--)
                                 {
-                                    gameBoard[row, c + 1].setPlayer(2);
-                                    looking = false;
+                                    if (gameBoard[row, c + 1].getPlayer() == 0 && looking == true)
+                                    {
+                                        gameBoard[row, c + 1].setPlayer(2);
+                                        changeTurn();
+                                        looking = false;
+                                    }
                                 }
+
+
+                                compTurn = false;
+                                Console.WriteLine("Success!");
+
+
                             }
+                        }
 
-                            
-                            compTurn = false;
-                            Console.WriteLine("Success!");
-
+                        catch
+                        {
+                            Console.WriteLine("Referenced cell does not exist");
 
                         }
-                    }
 
-                    catch
-                    {
-                        Console.WriteLine("Referenced cell does not exist");
-
-                    }
-
-                    //check left
-                    try
-                    {
-                        if (gameBoard[r, c - 1].getPlayer() == 0 && compTurn == true)                        
+                        //check left
+                        try
                         {
-                            bool looking = true;
-
-                            int col = gameBoard[r, c - 1].getCol();
-
-                            for (int row = numRows - 1; row >= gameBoard[r, c - 1].getRow(); row--)
+                            if (gameBoard[r, c - 1].getPlayer() == 0 && compTurn == true)
                             {
-                                if (gameBoard[row, c - 1].getPlayer() == 0 && looking == true)
+                                bool looking = true;
+
+                                int col = gameBoard[r, c - 1].getCol();
+
+                                for (int row = numRows - 1; row >= gameBoard[r, c - 1].getRow(); row--)
                                 {
-                                    gameBoard[row, c - 1].setPlayer(2);
-                                    looking = false;
+                                    if (gameBoard[row, c - 1].getPlayer() == 0 && looking == true)
+                                    {
+                                        gameBoard[row, c - 1].setPlayer(2);
+                                        looking = false;
+                                        changeTurn();
+                                    }
                                 }
+
+
+                                compTurn = false;
+                                Console.WriteLine("Success");
+
                             }
-
-                            
-                            compTurn = false;
-                            Console.WriteLine("Success");
-
                         }
-                    }
 
-                    catch
-                    {
-                        Console.WriteLine("Referenced cell does not exist");
-
-                    }
-
-                    //check up
-                    try
-                    {
-                        if (gameBoard[r + 1, c ].getPlayer() == 0 && compTurn == true)
+                        catch
                         {
-                            gameBoard[r + 1, c].setPlayer(2);
-                            compTurn = false;
-                            Console.WriteLine("Success!");
+                            Console.WriteLine("Referenced cell does not exist");
 
                         }
+
+                        //check up
+                        try
+                        {
+                            if (gameBoard[r + 1, c].getPlayer() == 0 && compTurn == true)
+                            {
+                                gameBoard[r + 1, c].setPlayer(2);
+                                compTurn = false;
+                                changeTurn();
+                                Console.WriteLine("Success!");
+
+                            }
+                        }
+
+                        catch
+                        {
+                            Console.WriteLine("Referenced cell does not exist");
+
+                        }
+
                     }
 
-                    catch
+                    if (compTurn == true)
                     {
-                        Console.WriteLine("Referenced cell does not exist");
 
                     }
+
 
                 }
-
-                if (compTurn == true)
-                {
-
-                }
-
 
             }
 
-
-
         }
 
+        public void compDoubleCheck()
+        {
+            if (getTurn() != 0)
+            {
+                bool compTurn = true;
+
+                foreach (Cell Cell in gameBoard)
+                {
+                    int r = Cell.getRow();
+                    int c = Cell.getCol();
+                    int p = Cell.getPlayer();
+
+                    if (compTurn == true && p == 1)
+                    {
+                        //check right
+                        try
+                        {
+                            if (gameBoard[r, c + 1].getPlayer() == 1)
+                            {
+                                bool looking = true;
+
+                                int col = gameBoard[r, c + 2].getCol();
+
+                                for (int row = numRows - 1; row >= gameBoard[r, c + 2].getRow(); row--)
+                                {
+                                    if (gameBoard[row, c + 2].getPlayer() == 0 && looking == true)
+                                    {
+                                        
+                                        gameBoard[row, c + 2].setPlayer(2);
+                                        changeTurn();
+                                        looking = false;
+                                    }
+                                }
+
+
+                                compTurn = false;
+                                Console.WriteLine("Success!");
+
+
+                            }
+                        }
+
+                        catch
+                        {
+                            Console.WriteLine("Referenced cell does not exist");
+
+                        }
+
+                        //check left
+                        try
+                        {
+                            if (gameBoard[r, c - 1].getPlayer() == 1 && compTurn == true)
+                            {
+                                bool looking = true;
+
+                                int col = gameBoard[r, c - 2].getCol();
+
+                                for (int row = numRows - 1; row >= gameBoard[r, c - 2].getRow(); row--)
+                                {
+                                    if (gameBoard[row, c - 2].getPlayer() == 0 && looking == true)
+                                    {
+                                        gameBoard[row, c - 2].setPlayer(2);
+                                        changeTurn();
+                                        looking = false;
+                                    }
+                                }
+
+
+                                compTurn = false;
+                                Console.WriteLine("Success");
+
+                            }
+                        }
+
+                        catch
+                        {
+                            Console.WriteLine("Referenced cell does not exist");
+
+                        }
+
+                        //need to program looking for lower connections
+
+                    }
+
+                    if (compTurn == true)
+                    {
+
+                    }
+
+                }
+
+            }
+
+        }
         public int getTurn()
         {
             return playerTurn % 2;

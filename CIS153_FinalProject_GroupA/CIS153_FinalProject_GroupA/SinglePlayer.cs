@@ -178,17 +178,16 @@ namespace CIS153_FinalProject_GroupA
 
                 }
             }
-            gameBoard.horizontalRightCheck();
-            //gameBoard.horizontalLeftCheck();
-            gameBoard.verticalUpperCheck();
-            //gameBoard.verticalLowerCheck();
-            gameBoard.diagonalUpperRightCheck();
-            gameBoard.diagonalLowerRightCheck();
+
+            checkForWinner();
 
             //This is called so that the next action taken is by player 2
-            gameBoard.changeTurn();
+
+            gameBoard.compDoubleCheck();
             gameBoard.compSingleCheck();
             updateCompTurn();
+
+            checkForWinner();
             
 
         }
@@ -233,7 +232,13 @@ namespace CIS153_FinalProject_GroupA
             btn_Click(c);
         }
 
-
+        public void checkForWinner()
+        {
+            gameBoard.horizontalRightCheck();
+            gameBoard.verticalUpperCheck();
+            gameBoard.diagonalUpperRightCheck();
+            gameBoard.diagonalLowerRightCheck();
+        }
 
         //Updates the colors of the buttons on the forms, because the Board class houses the AI functions, 
         //and can't update the SinglePlayer form
