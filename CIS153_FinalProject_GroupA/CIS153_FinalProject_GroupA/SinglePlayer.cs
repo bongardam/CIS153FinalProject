@@ -140,19 +140,11 @@ namespace CIS153_FinalProject_GroupA
 
             bool falling = true;
 
-            if (c == 8)
+            //decrements a for loop to check each row in the column sent to this function
+            //if the cell at the bottom of the row is empty
+            //
+            for (int r = gameBoard.getNumRows() - 1; r >= 0; r--)
             {
-                Console.WriteLine("Error returned from AI check");
-            }
-
-            if (c == 7)
-            {
-                c = 1;
-            }
-            else
-            {
-                for (int r = gameBoard.getNumRows() - 1; r >= 0; r--)
-                {
 
                     if (gameBoard.getCell(r, c).getPlayer() == 0 & falling == true)
                     {
@@ -176,8 +168,8 @@ namespace CIS153_FinalProject_GroupA
 
                     }
 
-                }
             }
+            
 
             checkForWinner();
 
@@ -244,6 +236,10 @@ namespace CIS153_FinalProject_GroupA
         //and can't update the SinglePlayer form
         private void updateCompTurn()
         {
+            // cycles runs a for look to cycle through each row, 
+            //and a nested for loop to cycle through each column
+            //and change the color to red or yellow according to 
+            //the correct player
             for (int r = gameBoard.getNumRows() - 1; r >= 0; r--)
             {
                 for (int c = gameBoard.getNumCols() - 1; c >= 0; c--)

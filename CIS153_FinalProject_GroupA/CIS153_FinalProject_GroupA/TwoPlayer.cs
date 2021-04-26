@@ -23,6 +23,14 @@ namespace CIS153_FinalProject_GroupA
 
         private Board gameBoard;
 
+        bool column0Full = false;
+        bool column1Full = false;
+        bool column2Full = false;
+        bool column3Full = false;
+        bool column4Full = false;
+        bool column5Full = false;
+        bool column6Full = false;
+
         ////coded by brendan, i have these set at the board level
         //const int columncount = 7;
         //const int rowcount = 6;
@@ -219,12 +227,21 @@ namespace CIS153_FinalProject_GroupA
                         gameBoard.getCell(r, c).setPlayer(1);
                         gameBoard.getCell(r, c).getButton().BackColor = Color.Red;
                         Console.WriteLine("Button Row: " + gameBoard.getCell(r, c).getButton().Name[4]);
+
+                        if(r == 0)
+                        {
+                            columnFull(c);
+                        }
                     }
                     else
                     {
                         gameBoard.getCell(r, c).setPlayer(2);
                         gameBoard.getCell(r, c).getButton().BackColor = Color.Yellow;
                         Console.WriteLine("Button Row: " + gameBoard.getCell(r, c).getButton().Name[4]);
+                        if (r == 0)
+                        {
+                            columnFull(c);
+                        }
                     }
 
                     falling = false;
@@ -235,14 +252,65 @@ namespace CIS153_FinalProject_GroupA
 
             }
 
+            
+
             gameBoard.horizontalRightCheck();
             //gameBoard.horizontalLeftCheck();
             gameBoard.verticalUpperCheck();
             //gameBoard.verticalLowerCheck();
             gameBoard.diagonalUpperRightCheck();
             gameBoard.diagonalLowerRightCheck();
+
         }
 
+
+        public void columnFull(int c)
+        {
+            if( c == 0)
+            {
+                 column0Full = true;
+                Console.WriteLine("Collumn " + c + " full");
+            }
+
+            if (c == 1)
+            {
+                 column1Full = true;
+                Console.WriteLine("Collumn " + c + " full");
+            }
+            if (c == 2)
+            {
+
+                 column2Full = true;
+                Console.WriteLine("Collumn " + c + " full");
+            }
+            if (c == 3)
+            {
+                 column3Full = true;
+                Console.WriteLine("Collumn " + c + " full");
+            }
+            if (c == 4)
+            {
+                 column4Full = true;
+                Console.WriteLine("Collumn " + c + " full");
+            }
+            if (c == 5)
+            {
+                 column5Full = true;
+                Console.WriteLine("Collumn " + c + " full");
+            }
+            if (c == 6)
+            {
+                 column6Full = true;
+                Console.WriteLine("Collumn " + c + " full");
+            }
+
+            for (int r = gameBoard.getNumRows() - 1; r >= 0; r--)
+            {
+                gameBoard.getCell(r, c).getButton().Enabled = false;
+            }
+
+
+        }
 
 
     }
