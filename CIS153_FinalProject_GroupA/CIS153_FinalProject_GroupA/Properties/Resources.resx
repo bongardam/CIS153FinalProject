@@ -133,6 +133,9 @@
   <data name="connect4logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\connect4logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="connect4RESIZE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connect4RESIZE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PlayerOneStats" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayerOneStats.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
@@ -157,7 +160,7 @@
   <data name="connect4logoRESIZE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\connect4logoRESIZE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="connect4RESIZE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\connect4RESIZE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="theboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\theboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

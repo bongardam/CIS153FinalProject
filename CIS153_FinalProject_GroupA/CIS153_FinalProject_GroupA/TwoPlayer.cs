@@ -20,7 +20,6 @@ namespace CIS153_FinalProject_GroupA
     public partial class TwoPlayer : Form
     {
         private Welcome welcome;
-
         private Board gameBoard;
 
         bool column0Full = false;
@@ -30,13 +29,6 @@ namespace CIS153_FinalProject_GroupA
         bool column4Full = false;
         bool column5Full = false;
         bool column6Full = false;
-
-        ////coded by brendan, i have these set at the board level
-        //const int columncount = 7;
-        //const int rowcount = 6;
-
-
-        //int[,] board = new int[rowcount, columncount]; // bc: inits our board which we will store the user's moves in 
         public TwoPlayer()
         {
             InitializeComponent();
@@ -55,6 +47,7 @@ namespace CIS153_FinalProject_GroupA
             InitializeComponent();
             CenterToScreen();
             welcome = wel;
+            txt_turn.Text = "Player 1's Turn";
             gameBoard = new Board();
             setUpGame();
         }
@@ -86,7 +79,7 @@ namespace CIS153_FinalProject_GroupA
             //Find all buttons on the form
             //Be careful becuase if you have other buttons besides the cells (restart, exit, etc) this could cause an issue
             //Might need an if statement to exclude those buttons
-            foreach (var button in this.Controls.OfType<Button>())
+            foreach (var button in this.Controls.OfType<RoundButton>())
             {
                 name = button.Name;
                 posDelim = name.IndexOf(delim);
@@ -134,25 +127,6 @@ namespace CIS153_FinalProject_GroupA
 
         private void twoplayer_paint(object sender, PaintEventArgs e)
         {
-            //    Graphics g = e.Graphics;
-            //    Brush bluebrush = new SolidBrush(Color.Blue); // bc: just a brush
-            //    Brush whitebrush = new SolidBrush(Color.White); // bc: another brush
-
-            //    //rectangle toprect = new rectangle(0, 0, 800, 145); // bc: placeholder rectangle i will
-            //    //g.fillrectangle(whitebrush, toprect);              //     finish up next week
-
-            //    // bc: the size of the shapes are relative to the column and row
-            //    // for example: row 1, column 3 would have
-            //    // xpos = 101, ypos = 303
-            //    for (int c = 0; c < columncount; c++)
-            //    {
-            //        for (int r = 0; r < rowcount; r++)
-            //        {                                // xpos, ypos, width, height
-            //            Rectangle rect = new Rectangle(c * 101 + 15, r * 101 + 151, 90, 90);
-            //            g.FillRectangle(bluebrush, rect);
-            //            g.FillEllipse(whitebrush, rect);
-            //        }
-            //    }
         }
 
 
@@ -162,41 +136,39 @@ namespace CIS153_FinalProject_GroupA
         //   variable, and with rows starting at 5 and decrementing till 0
         //================================================================================================
 
-        private void btn_0_0_Click_1(object sender, EventArgs e)
+        private void btn_0_0_Click(object sender, EventArgs e)
         {
             btn_Click(0);
         }
 
-        private void btn_0_1_Click_1(object sender, EventArgs e)
+        private void btn_0_1_Click(object sender, EventArgs e)
         {
             btn_Click(1);
         }
 
-        private void btn_0_2_Click_1(object sender, EventArgs e)
+        private void btn_0_2_Click(object sender, EventArgs e)
         {
             btn_Click(2);
         }
 
-        private void btn_0_3_Click(object sender, EventArgs e)
+        private void btn_0_3_Click_1(object sender, EventArgs e)
         {
             btn_Click(3);
         }
 
-        private void btn_0_4_Click(object sender, EventArgs e)
+        private void btn_0_4_Click_1(object sender, EventArgs e)
         {
             btn_Click(4);
         }
 
-        private void btn_0_5_Click(object sender, EventArgs e)
+        private void btn_0_5_Click_1(object sender, EventArgs e)
         {
             btn_Click(5);
-         
         }
 
-        private void btn_0_6_Click(object sender, EventArgs e)
+        private void btn_0_6_Click_1(object sender, EventArgs e)
         {
             btn_Click(6);
-           
         }
 
 
@@ -218,10 +190,10 @@ namespace CIS153_FinalProject_GroupA
 
             for (int r = gameBoard.getNumRows() - 1; r >= 0; r--)
             {
-
                 if (gameBoard.getCell(r, c).getPlayer() == 0 & falling == true)
                 {
-
+                    txt_turn.Text = "Player 2's Turn";
+                    txt_turn.ForeColor = Color.Yellow;
                     if (gameBoard.getTurn() == 0)
                     {
                         gameBoard.getCell(r, c).setPlayer(1);
@@ -235,6 +207,8 @@ namespace CIS153_FinalProject_GroupA
                     }
                     else
                     {
+                        txt_turn.Text = "Player 1's Turn";
+                        txt_turn.ForeColor = Color.Red;
                         gameBoard.getCell(r, c).setPlayer(2);
                         gameBoard.getCell(r, c).getButton().BackColor = Color.Yellow;
                         Console.WriteLine("Button Row: " + gameBoard.getCell(r, c).getButton().Name[4]);
@@ -308,11 +282,7 @@ namespace CIS153_FinalProject_GroupA
             {
                 gameBoard.getCell(r, c).getButton().Enabled = false;
             }
-
-
         }
-
-
     }
 
 }

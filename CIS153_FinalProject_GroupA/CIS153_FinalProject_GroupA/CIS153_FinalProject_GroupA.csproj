@@ -56,6 +56,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Stats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +177,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\connect4RESIZE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\theboard.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
