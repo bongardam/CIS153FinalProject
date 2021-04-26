@@ -140,39 +140,57 @@ namespace CIS153_FinalProject_GroupA
 
             bool falling = true;
 
-            for (int r = gameBoard.getNumRows() - 1; r >= 0; r--)
+            if (c == 8)
             {
-
-                if (gameBoard.getCell(r, c).getPlayer() == 0 & falling == true)
-                {
-
-                    if (gameBoard.getTurn() == 0)
-                    {
-                        gameBoard.getCell(r, c).setPlayer(1);
-                        gameBoard.getCell(r, c).getButton().BackColor = Color.Red;
-                        Console.WriteLine("Button Row: " + gameBoard.getCell(r, c).getButton().Name[4]);
-                    }
-                    else
-                    {
-                        gameBoard.getCell(r, c).setPlayer(2);
-                        gameBoard.getCell(r, c).getButton().BackColor = Color.Yellow;
-                        Console.WriteLine("Button Row: " + gameBoard.getCell(r, c).getButton().Name[4]);
-                    }
-
-                    falling = false;
-                    gameBoard.changeTurn();
-
-
-                }
-
+                Console.WriteLine("Error returned from AI check");
             }
 
+            if (c == 7)
+            {
+                c = 1;
+            }
+            else
+            {
+                for (int r = gameBoard.getNumRows() - 1; r >= 0; r--)
+                {
+
+                    if (gameBoard.getCell(r, c).getPlayer() == 0 & falling == true)
+                    {
+
+                        if (gameBoard.getTurn() == 0)
+                        {
+                            gameBoard.getCell(r, c).setPlayer(1);
+                            gameBoard.getCell(r, c).getButton().BackColor = Color.Red;
+                            Console.WriteLine("Button Row: " + gameBoard.getCell(r, c).getButton().Name[4]);
+                        }
+                        else
+                        {
+                            gameBoard.getCell(r, c).setPlayer(2);
+                            gameBoard.getCell(r, c).getButton().BackColor = Color.Yellow;
+                            Console.WriteLine("Button Row: " + gameBoard.getCell(r, c).getButton().Name[4]);
+                        }
+
+                        falling = false;
+                        gameBoard.changeTurn();
+
+
+                    }
+
+                }
+            }
             gameBoard.horizontalRightCheck();
             //gameBoard.horizontalLeftCheck();
             gameBoard.verticalUpperCheck();
             //gameBoard.verticalLowerCheck();
             gameBoard.diagonalUpperRightCheck();
             gameBoard.diagonalLowerRightCheck();
+
+            //This is called so that the next action taken is by player 2
+            gameBoard.changeTurn();
+            gameBoard.compSingleCheck();
+            updateCompTurn();
+            
+
         }
 
         private void btn_0_0_Click(object sender, EventArgs e)
@@ -209,6 +227,41 @@ namespace CIS153_FinalProject_GroupA
         {
             btn_Click(6);
         }
+
+        public void aibtnClick(int c)
+        {
+            btn_Click(c);
+        }
+
+
+
+        //Updates the colors of the buttons on the forms, because the Board class houses the AI functions, 
+        //and can't update the SinglePlayer form
+        private void updateCompTurn()
+        {
+            for (int r = gameBoard.getNumRows() - 1; r >= 0; r--)
+            {
+                for (int c = gameBoard.getNumCols() - 1; c >= 0; c--)
+                {
+                    Button b = gameBoard.getCell(r, c).getButton();
+                    int p = gameBoard.getCell(r, c).getPlayer();
+
+                    if (p == 1)
+                    {
+                        b.BackColor = Color.Red;
+                    }
+                    if (p == 2)
+                    {
+                        b.BackColor = Color.Yellow;
+                    }
+
+                }
+            }
+        }
+
+
+
+
 
     }
 

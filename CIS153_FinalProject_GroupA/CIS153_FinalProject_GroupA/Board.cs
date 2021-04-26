@@ -60,6 +60,114 @@ namespace CIS153_FinalProject_GroupA
             //Console.WriteLine("PlayerTurn % 2: " + playerTurn % 2);
         }
 
+        public void compSingleCheck()
+        {
+            bool compTurn = true;
+
+            foreach(Cell Cell in gameBoard)
+            {
+                int r = Cell.getRow();
+                int c = Cell.getCol();
+                int p = Cell.getPlayer();
+
+                // if it's the computer's turn, and a cell is claimed by player 1
+                if (compTurn == true && p == 1)
+                {
+                    //check right
+                    try
+                    {
+                        if( gameBoard[r, c + 1].getPlayer() == 0)
+                        {
+                            bool looking = true;
+
+                            int col = gameBoard[r, c + 1].getCol();
+
+                            for(int row = numRows - 1; row >= gameBoard[r, c + 1].getRow(); row--)
+                            {
+                                if (gameBoard[row, c + 1].getPlayer() == 0 && looking == true)
+                                {
+                                    gameBoard[row, c + 1].setPlayer(2);
+                                    looking = false;
+                                }
+                            }
+
+                            
+                            compTurn = false;
+                            Console.WriteLine("Success!");
+
+
+                        }
+                    }
+
+                    catch
+                    {
+                        Console.WriteLine("Referenced cell does not exist");
+
+                    }
+
+                    //check left
+                    try
+                    {
+                        if (gameBoard[r, c - 1].getPlayer() == 0 && compTurn == true)                        
+                        {
+                            bool looking = true;
+
+                            int col = gameBoard[r, c - 1].getCol();
+
+                            for (int row = numRows - 1; row >= gameBoard[r, c - 1].getRow(); row--)
+                            {
+                                if (gameBoard[row, c - 1].getPlayer() == 0 && looking == true)
+                                {
+                                    gameBoard[row, c - 1].setPlayer(2);
+                                    looking = false;
+                                }
+                            }
+
+                            
+                            compTurn = false;
+                            Console.WriteLine("Success");
+
+                        }
+                    }
+
+                    catch
+                    {
+                        Console.WriteLine("Referenced cell does not exist");
+
+                    }
+
+                    //check up
+                    try
+                    {
+                        if (gameBoard[r + 1, c ].getPlayer() == 0 && compTurn == true)
+                        {
+                            gameBoard[r + 1, c].setPlayer(2);
+                            compTurn = false;
+                            Console.WriteLine("Success!");
+
+                        }
+                    }
+
+                    catch
+                    {
+                        Console.WriteLine("Referenced cell does not exist");
+
+                    }
+
+                }
+
+                if (compTurn == true)
+                {
+
+                }
+
+
+            }
+
+
+
+        }
+
         public int getTurn()
         {
             return playerTurn % 2;
