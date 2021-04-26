@@ -191,9 +191,16 @@ namespace CIS153_FinalProject_GroupA
         public void fillLabels()
         {
             int count = playerOneStats.Count;
+            int POWins = playerOneStats.Sum(item => item.getPlayerOneOutcome());
+            int POTies = playerOneStats.Sum(item => item.getPlayerOneTie());
+            int PCWins = playerCompStats.Sum(item => item.getCompOutcome());
+            double POPercent = ((float)POWins / count) * 100;
 
 
             lbl_gamesPlayedDisplay.Text = count.ToString();
+            lbl_gamesWonDisplay.Text = POWins.ToString();
+            lbl_gamesTiedDisplay.Text = POTies.ToString();
+            lbl_gamesPercentDisplay.Text = POPercent.ToString("0") + "%";
         }
     }
 }

@@ -13,6 +13,8 @@ namespace CIS153_FinalProject_GroupA
         int compOutcome;
         int compTie;
 
+        public int statCompOutcome { get; internal set; }
+
         public PCStats(int cm, int cg, int co, int ct)
         {            
             compMoves = cm;
