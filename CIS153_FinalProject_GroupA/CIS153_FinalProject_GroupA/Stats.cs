@@ -16,7 +16,7 @@ namespace CIS153_FinalProject_GroupA
         private Welcome welcome;
 
         public List<POStats> playerOneStats = new List<POStats>();
-        public List<PTStats> playerTwoStats = new List<PTStats>();
+        //public List<PTStats> playerTwoStats = new List<PTStats>();
         public List<PCStats> playerCompStats = new List<PCStats>();
 
         public Stats()
@@ -37,7 +37,7 @@ namespace CIS153_FinalProject_GroupA
             welcome = wel;
             CenterToScreen();
             readTextFilePO();
-            readTextFilePT();
+            //readTextFilePT();
             readTextFilePC();
             fillLabels();
         }
@@ -106,48 +106,48 @@ namespace CIS153_FinalProject_GroupA
         }
         
 
-        public void readTextFilePT()
-        {
-            string fileContent = "";
-            playerTwoStats = new List<PTStats>();
+        //public void readTextFilePT()
+        //{
+        //    string fileContent = "";
+        //    playerTwoStats = new List<PTStats>();
 
 
-            try
-            {
-                fileContent = CIS153_FinalProject_GroupA.Properties.Resources.PlayerTwoStats;
-                Console.WriteLine("Success");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error loading File: " + e.Message);
-            }
+        //    try
+        //    {
+        //        fileContent = CIS153_FinalProject_GroupA.Properties.Resources.PlayerTwoStats;
+        //        Console.WriteLine("Success");
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Console.WriteLine("Error loading File: " + e.Message);
+        //    }
 
-            StreamReader file = new StreamReader("../../Resources/PlayerTwoStats.txt");
-            string line = file.ReadLine();
-            int statPlayerTwoMoves;
-            int statPlayerTwoGames;
-            int statPlayerTwoOutcome;
+        //    StreamReader file = new StreamReader("../../Resources/PlayerTwoStats.txt");
+        //    string line = file.ReadLine();
+        //    int statPlayerTwoMoves;
+        //    int statPlayerTwoGames;
+        //    int statPlayerTwoOutcome;
 
-            int comma;
-            char delim = ',';
+        //    int comma;
+        //    char delim = ',';
 
-            PTStats newPlayerTwoStats;
+        //    PTStats newPlayerTwoStats;
 
-            while (line != null)
-            {
-                comma = line.IndexOf(delim);
-                statPlayerTwoMoves = Int32.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
-                statPlayerTwoGames = Int32.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
-                statPlayerTwoOutcome = Int32.Parse(line.Substring(0, comma));
+        //    while (line != null)
+        //    {
+        //        comma = line.IndexOf(delim);
+        //        statPlayerTwoMoves = Int32.Parse(line.Substring(0, comma));
+        //        line = line.Substring(comma + 1);
+        //        statPlayerTwoGames = Int32.Parse(line.Substring(0, comma));
+        //        line = line.Substring(comma + 1);
+        //        statPlayerTwoOutcome = Int32.Parse(line.Substring(0, comma));
 
-                newPlayerTwoStats = new PTStats(statPlayerTwoMoves, statPlayerTwoGames, statPlayerTwoOutcome);
-                playerTwoStats.Add(newPlayerTwoStats);
-                line = file.ReadLine();
-            }
+        //        newPlayerTwoStats = new PTStats(statPlayerTwoMoves, statPlayerTwoGames, statPlayerTwoOutcome);
+        //        playerTwoStats.Add(newPlayerTwoStats);
+        //        line = file.ReadLine();
+        //    }
 
-        }
+        //}
 
         public void readTextFilePC()
         {

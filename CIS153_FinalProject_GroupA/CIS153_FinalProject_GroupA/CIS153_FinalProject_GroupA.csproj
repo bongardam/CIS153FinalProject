@@ -66,7 +66,6 @@
       <DependentUpon>Stats.cs</DependentUpon>
     </Compile>
     <Compile Include="PCStats.cs" />
-    <Compile Include="PTStats.cs" />
     <Compile Include="POStats.cs" />
     <Compile Include="GameOver.cs">
       <SubType>Form</SubType>
@@ -138,9 +137,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PlayerOneStats.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\PlayerTwoStats.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CompStats.txt" />

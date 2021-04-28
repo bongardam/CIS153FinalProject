@@ -17,7 +17,7 @@ namespace CIS153_FinalProject_GroupA
         //class variables
         
         public List<POStats> playerOneStats = new List<POStats>();
-        public List<PTStats> playerTwoStats = new List<PTStats>();
+        //public List<PTStats> playerTwoStats = new List<PTStats>();
         public List<PCStats> playerCompStats = new List<PCStats>();
         private Welcome welcome;
         private SinglePlayer singlePlayer;
@@ -95,7 +95,7 @@ namespace CIS153_FinalProject_GroupA
         public void readTextFilePT()
         {
             string fileContent = "";
-            playerTwoStats = new List<PTStats>();
+            //playerTwoStats = new List<PTStats>();
 
 
             try
@@ -117,7 +117,7 @@ namespace CIS153_FinalProject_GroupA
             int comma;
             char delim = ',';
 
-            PTStats newPlayerTwoStats;
+            //PTStats newPlayerTwoStats;
 
             while (line != null)
             {
@@ -128,8 +128,8 @@ namespace CIS153_FinalProject_GroupA
                 line = line.Substring(comma + 1);
                 statPlayerTwoOutcome = Int32.Parse(line.Substring(0, comma));
 
-                newPlayerTwoStats = new PTStats(statPlayerTwoMoves, statPlayerTwoGames, statPlayerTwoOutcome);
-                playerTwoStats.Add(newPlayerTwoStats);
+               // newPlayerTwoStats = new PTStats(statPlayerTwoMoves, statPlayerTwoGames, statPlayerTwoOutcome);
+               // playerTwoStats.Add(newPlayerTwoStats);
                 line = file.ReadLine();
             }
 
