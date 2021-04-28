@@ -66,7 +66,7 @@
             this.lbl_firstPlayer.Name = "lbl_firstPlayer";
             this.lbl_firstPlayer.Size = new System.Drawing.Size(58, 13);
             this.lbl_firstPlayer.TabIndex = 2;
-            this.lbl_firstPlayer.Text = "PLAYER 1";
+            this.lbl_firstPlayer.Text = "player 1 ID";
             // 
             // lbl_secondPlayer
             // 

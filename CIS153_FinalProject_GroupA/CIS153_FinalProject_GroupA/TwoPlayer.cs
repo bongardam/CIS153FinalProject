@@ -21,7 +21,6 @@ namespace CIS153_FinalProject_GroupA
     {
         private Welcome welcome;
         private Board gameBoard;
-        private Cell cell;
 
         bool column0Full = false;
         bool column1Full = false;
@@ -74,10 +73,9 @@ namespace CIS153_FinalProject_GroupA
 
         public void loadGameOverForm()
         {
-            fillStats();
             GameOver formToLoad = new GameOver(this);
             formToLoad.Show();
-            this.Hide();            
+            this.Hide();
         }
 
 
@@ -333,11 +331,6 @@ namespace CIS153_FinalProject_GroupA
             {
                 gameBoard.getCell(r, c).getButton().Enabled = false;
             }
-        }
-
-        private void fillStats()
-        {
-
         }
     }
 
