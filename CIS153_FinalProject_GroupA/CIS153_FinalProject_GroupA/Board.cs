@@ -33,6 +33,10 @@ namespace CIS153_FinalProject_GroupA
             return numCols;
         }
 
+        public bool getGameOver()
+        {
+            return gameOver;
+        }
 
 
         public Cell getCell(int r, int c)
@@ -546,7 +550,8 @@ namespace CIS153_FinalProject_GroupA
                             b.Enabled = false;
                         }
                         //MessageBox.Show("Player " + p + "Wins!");
-                        twoPlayer.loadGameOverForm();
+                        //twoPlayer.loadGameOverForm();
+                        gameOver = true;
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
                 }
@@ -613,7 +618,8 @@ namespace CIS153_FinalProject_GroupA
                             b.Enabled = false;
                         }
                         //MessageBox.Show("Player " + p + "Wins!");
-                        twoPlayer.loadGameOverForm();
+                        //twoPlayer.loadGameOverForm();
+                        gameOver = true;
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
                 }
@@ -646,7 +652,8 @@ namespace CIS153_FinalProject_GroupA
                             b.Enabled = false;
                         }
                         //MessageBox.Show("Player " + p + "Wins!");
-                        twoPlayer.loadGameOverForm();
+                        //twoPlayer.loadGameOverForm();
+                        gameOver = true;
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
                 }
@@ -681,7 +688,8 @@ namespace CIS153_FinalProject_GroupA
                             b.Enabled = false;
                         }
                         //MessageBox.Show("Player " + p + "Wins!");
-                        twoPlayer.loadGameOverForm();
+                        //twoPlayer.loadGameOverForm();
+                        gameOver = true;
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
                       

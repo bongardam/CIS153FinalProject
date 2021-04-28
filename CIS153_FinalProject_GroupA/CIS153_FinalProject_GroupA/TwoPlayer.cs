@@ -153,36 +153,71 @@ namespace CIS153_FinalProject_GroupA
         private void btn_0_0_Click(object sender, EventArgs e)
         {
             btn_Click(0);
+
+            if (gameBoard.getGameOver() == true)
+            {
+                loadGameOverForm();
+            }
         }
 
         private void btn_0_1_Click(object sender, EventArgs e)
         {
             btn_Click(1);
+
+            if (gameBoard.getGameOver() == true)
+            {
+                loadGameOverForm();
+            }
         }
 
         private void btn_0_2_Click(object sender, EventArgs e)
         {
             btn_Click(2);
+
+            if (gameBoard.getGameOver() == true)
+            {
+                loadGameOverForm();
+            }
         }
 
         private void btn_0_3_Click_1(object sender, EventArgs e)
         {
             btn_Click(3);
+
+            if (gameBoard.getGameOver() == true)
+            {
+                loadGameOverForm();
+            }
         }
 
         private void btn_0_4_Click_1(object sender, EventArgs e)
         {
             btn_Click(4);
+
+            if (gameBoard.getGameOver() == true)
+            {
+                loadGameOverForm();
+            }
         }
 
         private void btn_0_5_Click_1(object sender, EventArgs e)
         {
             btn_Click(5);
+
+            if (gameBoard.getGameOver() == true)
+            {
+                loadGameOverForm();
+            }
         }
 
         private void btn_0_6_Click_1(object sender, EventArgs e)
         {
             btn_Click(6);
+
+            if (gameBoard.getGameOver() == true)
+            {
+                loadGameOverForm();
+            }
         }
 
 
