@@ -159,9 +159,9 @@ namespace CIS153_FinalProject_GroupA
                         //check up
                         try
                         {
-                            if (gameBoard[r + 1, c].getPlayer() == 0 && compTurn == true)
+                            if (gameBoard[r - 1, c].getPlayer() == 0 && compTurn == true)
                             {
-                                gameBoard[r + 1, c].setPlayer(2);
+                                gameBoard[r - 1, c].setPlayer(2);
                                 Console.WriteLine("Set By Comp Single Check Up");
                                 compTurn = false;
                                 changeTurn();
@@ -276,11 +276,11 @@ namespace CIS153_FinalProject_GroupA
                         try
                         {
                             if (
-                                gameBoard[r + 1, c].getPlayer() == 1 &&
-                                gameBoard[r + 2, c].getPlayer() == 0 && 
+                                gameBoard[r - 1, c].getPlayer() == 1 &&
+                                gameBoard[r - 2, c].getPlayer() == 0 && 
                                 compTurn == true)
                             {
-                                gameBoard[r + 2, c].setPlayer(2);
+                                gameBoard[r - 2, c].setPlayer(2);
                                 compTurn = false;
                                 changeTurn();
                                 Console.WriteLine("Success!");
