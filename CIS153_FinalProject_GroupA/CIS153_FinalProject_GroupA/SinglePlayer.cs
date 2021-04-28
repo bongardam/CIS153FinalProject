@@ -182,6 +182,7 @@ namespace CIS153_FinalProject_GroupA
 
             //This is called so that the next action taken is by player 2
 
+            gameBoard.compTryToBeatPlayer();
             gameBoard.finalCompCheckAgainstPlayer();
             gameBoard.compTripleCheckFightPlayer();
             gameBoard.compDoubleCheck();
