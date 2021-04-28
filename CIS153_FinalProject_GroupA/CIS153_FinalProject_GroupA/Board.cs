@@ -98,12 +98,13 @@ namespace CIS153_FinalProject_GroupA
                                         Console.WriteLine("Placed By Comp Single Check Right");
                                         //changes turn on victory
                                         changeTurn();
+                                        compTurn = false;
                                         looking = false;
                                     }
                                 }
 
 
-                                compTurn = false;
+                                //compTurn = false;
                                 Console.WriteLine("Success!");
 
 
@@ -133,11 +134,12 @@ namespace CIS153_FinalProject_GroupA
                                         Console.WriteLine("Placed by Comp Single Check Left");
                                         looking = false;
                                         changeTurn();
+                                        compTurn = false;
                                     }
                                 }
 
 
-                                compTurn = false;
+                                //compTurn = false;
                                 Console.WriteLine("Success");
 
                             }
@@ -215,11 +217,12 @@ namespace CIS153_FinalProject_GroupA
                                         gameBoard[row, c + 2].setPlayer(2);
                                         changeTurn();
                                         looking = false;
+                                        compTurn = false;
                                     }
                                 }
 
 
-                                compTurn = false;
+                                //compTurn = false;
                                 Console.WriteLine("Success!");
 
 
@@ -248,11 +251,12 @@ namespace CIS153_FinalProject_GroupA
                                         gameBoard[row, c - 2].setPlayer(2);
                                         changeTurn();
                                         looking = false;
+                                        compTurn = false;
                                     }
                                 }
 
 
-                                compTurn = false;
+                                //compTurn = false;
                                 Console.WriteLine("Success");
 
                             }
@@ -406,11 +410,12 @@ namespace CIS153_FinalProject_GroupA
                                         gameBoard[row, c + 3].setPlayer(2);
                                         changeTurn();
                                         looking = false;
+                                        compTurn = false;
                                     }
                                 }
 
 
-                                compTurn = false;
+                                //compTurn = false;
                                 Console.WriteLine("Success!");
 
 
@@ -443,11 +448,12 @@ namespace CIS153_FinalProject_GroupA
                                         gameBoard[row, c - 3].setPlayer(2);
                                         changeTurn();
                                         looking = false;
+                                        compTurn = false;
                                     }
                                 }
 
 
-                                compTurn = false;
+                                //compTurn = false;
                                 Console.WriteLine("Success");
 
                             }
