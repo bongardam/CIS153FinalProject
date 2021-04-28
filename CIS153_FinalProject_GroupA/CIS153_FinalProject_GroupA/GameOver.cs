@@ -19,6 +19,7 @@ namespace CIS153_FinalProject_GroupA
         public List<POStats> playerOneStats = new List<POStats>();
         public List<PTStats> playerTwoStats = new List<PTStats>();
         public List<PCStats> playerCompStats = new List<PCStats>();
+        private Welcome welcome;
 
         public GameOver()
         {
@@ -169,16 +170,16 @@ namespace CIS153_FinalProject_GroupA
             loadWelcomeForm();
         }
 
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            loadWelcomeForm();
+        }
+
         public void loadWelcomeForm()
         {
             Welcome formToLoad = new Welcome(this);
             formToLoad.Show();
             this.Hide();
-        }
-
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void btn_showBoard_Click(object sender, EventArgs e)

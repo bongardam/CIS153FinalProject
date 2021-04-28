@@ -61,7 +61,14 @@ namespace CIS153_FinalProject_GroupA
 
         private void TwoPlayer_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            loadWelcomeForm();
+        }
+
+        public void loadWelcomeForm()
+        {
+            Welcome formToLoad = new Welcome(this);
+            formToLoad.Show();
+            this.Hide();
         }
 
 

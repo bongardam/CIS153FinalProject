@@ -15,6 +15,9 @@ namespace CIS153_FinalProject_GroupA
     public partial class Welcome : Form
     {
         private GameOver gameOver;
+        private SinglePlayer singlePlayer;
+        private TwoPlayer twoPlayer;
+        private Stats stats;
 
         public Welcome()
         {
@@ -22,12 +25,48 @@ namespace CIS153_FinalProject_GroupA
             pictureBox_logo.Parent = pictureBox_bg;
             pictureBox_logo.BackColor = Color.Transparent;
             
+        }     
+
+        public Welcome(SinglePlayer sp)
+        {
+            InitializeComponent();
+            CenterToScreen();
+            singlePlayer = sp;
         }
 
+        public Welcome(TwoPlayer tp)
+        {
+            InitializeComponent();
+            CenterToScreen();
+            twoPlayer = tp;
+        }
+        public Welcome(Stats st)
+        {
+            InitializeComponent();
+            CenterToScreen();
+            stats = st;
+        }
         public Welcome(GameOver go)
         {
             InitializeComponent();
             CenterToScreen();
+            gameOver = go;
+        }
+        public void passedForm(SinglePlayer sp)
+        {
+            singlePlayer = sp;
+        }
+
+        public void passedForm(TwoPlayer tp)
+        {
+            twoPlayer = tp;
+        }
+        public void passedForm(Stats st)
+        {
+            stats = st;
+        }
+        public void passedForm(GameOver go)
+        {
             gameOver = go;
         }
 
@@ -53,7 +92,7 @@ namespace CIS153_FinalProject_GroupA
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         public void loadOneForm()

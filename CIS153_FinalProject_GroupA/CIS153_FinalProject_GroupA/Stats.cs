@@ -49,7 +49,14 @@ namespace CIS153_FinalProject_GroupA
         
         private void Stats_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            loadWelcomeForm();
+        }
+
+        public void loadWelcomeForm()
+        {
+            Welcome formToLoad = new Welcome(this);
+            formToLoad.Show();
+            this.Hide();
         }
 
         public void readTextFilePO()

@@ -12,7 +12,7 @@ namespace CIS153_FinalProject_GroupA
 {
     public partial class SinglePlayer : Form
     {
-        Welcome welcome;
+        private Welcome welcome;
         private Board gameBoard;
         public SinglePlayer()
         {
@@ -40,7 +40,14 @@ namespace CIS153_FinalProject_GroupA
 
         private void SinglePlayer_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            loadWelcomeForm();
+        }
+
+        public void loadWelcomeForm()
+        {
+            Welcome formToLoad = new Welcome(this);
+            formToLoad.Show();
+            this.Hide();
         }
 
         /// THIS MAY BE USED LATER ON
@@ -246,8 +253,11 @@ namespace CIS153_FinalProject_GroupA
             {
                 for (int c = gameBoard.getNumCols() - 1; c >= 0; c--)
                 {
+                    
                     Button b = gameBoard.getCell(r, c).getButton();
                     int p = gameBoard.getCell(r, c).getPlayer();
+
+                    Console.WriteLine("Player is " + p);
 
                     if (p == 1)
                     {
@@ -255,6 +265,7 @@ namespace CIS153_FinalProject_GroupA
                     }
                     if (p == 2)
                     {
+                        Console.WriteLine("Yellow Placed");
                         b.BackColor = Color.Yellow;
                     }
 
