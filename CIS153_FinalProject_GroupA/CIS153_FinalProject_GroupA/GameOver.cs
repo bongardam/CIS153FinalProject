@@ -20,6 +20,8 @@ namespace CIS153_FinalProject_GroupA
         public List<PTStats> playerTwoStats = new List<PTStats>();
         public List<PCStats> playerCompStats = new List<PCStats>();
         private Welcome welcome;
+        private SinglePlayer singlePlayer;
+        private TwoPlayer twoPlayer;
 
         public GameOver()
         {
@@ -27,6 +29,20 @@ namespace CIS153_FinalProject_GroupA
             readTextFilePO();
             readTextFilePT();
             readTextFilePC();
+        }
+
+        public GameOver(TwoPlayer tp)
+        {
+            InitializeComponent();
+            readTextFilePO();
+            readTextFilePT();
+            readTextFilePC();
+            twoPlayer = tp;
+        }
+
+        public void passedForm(TwoPlayer tp)
+        {
+            twoPlayer = tp;
         }
 
 

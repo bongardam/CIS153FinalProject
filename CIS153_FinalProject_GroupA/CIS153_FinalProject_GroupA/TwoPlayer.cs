@@ -71,6 +71,13 @@ namespace CIS153_FinalProject_GroupA
             this.Hide();
         }
 
+        public void loadGameOverForm()
+        {
+            GameOver formToLoad = new GameOver(this);
+            formToLoad.Show();
+            this.Hide();
+        }
+
 
         //I stole this part straight from zach, I included his comments to make for easier reading
         public void setUpGame()
