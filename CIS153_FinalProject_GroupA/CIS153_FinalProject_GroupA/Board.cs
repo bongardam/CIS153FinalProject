@@ -9,6 +9,7 @@ namespace CIS153_FinalProject_GroupA
 {
     class Board
     {
+        private TwoPlayer twoPlayer;
         
         private const int numRows = 6;
         private const int numCols = 7;
@@ -544,7 +545,8 @@ namespace CIS153_FinalProject_GroupA
                             Button b = cell.getButton();
                             b.Enabled = false;
                         }
-                        MessageBox.Show("Player " + p + "Wins!");
+                        //MessageBox.Show("Player " + p + "Wins!");
+                        twoPlayer.loadGameOverForm();
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
                 }
@@ -610,7 +612,8 @@ namespace CIS153_FinalProject_GroupA
                             Button b = cell.getButton();
                             b.Enabled = false;
                         }
-                        MessageBox.Show("Player " + p + "Wins!");
+                        //MessageBox.Show("Player " + p + "Wins!");
+                        twoPlayer.loadGameOverForm();
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
                 }
@@ -642,7 +645,8 @@ namespace CIS153_FinalProject_GroupA
                             Button b = cell.getButton();
                             b.Enabled = false;
                         }
-                        MessageBox.Show("Player " + p + "Wins!");
+                        //MessageBox.Show("Player " + p + "Wins!");
+                        twoPlayer.loadGameOverForm();
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
                 }
@@ -676,7 +680,8 @@ namespace CIS153_FinalProject_GroupA
                             Button b = cell.getButton();
                             b.Enabled = false;
                         }
-                        MessageBox.Show("Player " + p + "Wins!");
+                        //MessageBox.Show("Player " + p + "Wins!");
+                        twoPlayer.loadGameOverForm();
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
                       
@@ -710,7 +715,8 @@ namespace CIS153_FinalProject_GroupA
                             Button b = cell.getButton();
                             b.Enabled = false;
                         }
-                        MessageBox.Show("Player " + p + "Wins!");
+                        //MessageBox.Show("Player " + p + "Wins!");
+                        twoPlayer.loadGameOverForm();
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
 
