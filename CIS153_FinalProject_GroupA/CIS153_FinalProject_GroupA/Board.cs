@@ -724,7 +724,8 @@ namespace CIS153_FinalProject_GroupA
                             b.Enabled = false;
                         }
                         //MessageBox.Show("Player " + p + "Wins!");
-                        twoPlayer.loadGameOverForm();
+                        //twoPlayer.loadGameOverForm();
+                        gameOver = true;
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
 
