@@ -9,7 +9,7 @@ namespace CIS153_FinalProject_GroupA
 {
     class Board
     {
-        private readonly TwoPlayer twoPlayer;
+        private TwoPlayer twoPlayer;
         
         private const int numRows = 6;
         private const int numCols = 7;

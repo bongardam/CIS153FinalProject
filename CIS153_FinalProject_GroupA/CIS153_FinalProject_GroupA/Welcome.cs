@@ -22,6 +22,7 @@ namespace CIS153_FinalProject_GroupA
         public Welcome()
         {
             InitializeComponent();
+            CenterToScreen();
             pictureBox_logo.Parent = pictureBox_bg;
             pictureBox_logo.BackColor = Color.Transparent;
             
