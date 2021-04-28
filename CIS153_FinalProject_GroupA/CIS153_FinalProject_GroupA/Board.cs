@@ -772,7 +772,7 @@ namespace CIS153_FinalProject_GroupA
                             Console.WriteLine("Referenced Cell Does Not Exist");
                         }
 
-                        //check diagonal left
+                        //check diagonal up left
                         try
                         {
                             //checks if the player value up and to the left of the target cell's player
@@ -798,7 +798,7 @@ namespace CIS153_FinalProject_GroupA
 
                         }
 
-                        //check diagonal right
+                        //check diagonal up right
                         try
                         {
                             //checks if the player value up and to the left of the target cell's player
@@ -823,12 +823,63 @@ namespace CIS153_FinalProject_GroupA
                         {
 
                         }
+                    //check diagonal down left
+                    try
+                    {
+                        //checks if the player value up and to the left of the target cell's player
+                        //and checks if the same value is in the cell that two left and two up from the target
+                        //if the piece three to the left and three up is empty, and the cell underneath this empty
+                        // cell is full, it places a piece in the fourth diagonal place
 
-                        //check up
-                        try
+                        if
+                     (compTurn == true &&
+                     p == gameBoard[r + 1, c - 1].getPlayer() &&
+                     gameBoard[r + 1, c - 1].getPlayer() == gameBoard[r + 2, c - 2].getPlayer() &&
+                     gameBoard[r + 3, c - 3].getPlayer() == 0 &&
+                     gameBoard[r + 2, c - 3].getPlayer() != 0 &&
+                     p == 2)
+                        {
+                            gameBoard[r + 3, c - 3].setPlayer(2);
+                            compTurn = false;
+                            changeTurn();
+                        }
+                    }
+                    catch
+                    {
+
+                    }
+
+                    //check diagonal down right
+                    try
+                    {
+                        //checks if the player value up and to the left of the target cell's player
+                        //and checks if the same value is in the cell that two left and two up from the target
+                        //if the piece three to the left and three up is empty, and the cell underneath this empty
+                        // cell is full, it places a piece in the fourth diagonal place
+
+                        if
+                     (compTurn == true &&
+                     p == gameBoard[r + 1, c + 1].getPlayer() &&
+                     gameBoard[r + 1, c + 1].getPlayer() == gameBoard[r + 2, c + 2].getPlayer() &&
+                     gameBoard[r + 3, c + 3].getPlayer() == 0 &&
+                     gameBoard[r + 2, c + 3].getPlayer() != 0 &&
+                     p == 2)
+                        {
+                            gameBoard[r + 3, c + 3].setPlayer(2);
+                            compTurn = false;
+                            changeTurn();
+                        }
+                    }
+                    catch
+                    {
+
+                    }
+
+                    //check up
+                    try
                         {
                             if (compTurn == true &&
-                                    gameBoard[r - 1, c].getPlayer() == 1 &&
+                                    gameBoard[r - 1, c].getPlayer() == 2 &&
                                     gameBoard[r - 1, c].getPlayer() == gameBoard[r - 2, c].getPlayer() &&
                                     gameBoard[r - 3, c].getPlayer() == 0 &&
                                     compTurn == true)
