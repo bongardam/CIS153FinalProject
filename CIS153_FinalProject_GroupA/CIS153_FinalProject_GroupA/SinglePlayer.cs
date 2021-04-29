@@ -111,14 +111,13 @@ namespace CIS153_FinalProject_GroupA
         public void WriteToTextGO()
         {
             int gameWinner = gameBoard.getWinnerPlayer();
-            int gameMoves = gameBoard.getPlayerMoves();
             int secondPlayerID = 0;
 
             string filePath = "../../Resources/GameOverStats.txt";
 
             StreamWriter sw = new StreamWriter(filePath, true);
 
-            sw.WriteLineAsync(gameWinner + "," + gameMoves + "," + secondPlayerID);
+            sw.WriteLineAsync(gameWinner + "," + secondPlayerID);
 
             sw.Close();
 
@@ -127,9 +126,6 @@ namespace CIS153_FinalProject_GroupA
 
         public void WriteToTextStats()
         {
-            
-
-            int statPlayerOneMoves = gameBoard.getPlayerMoves();
             int statPlayerOneOutcome = gameBoard.getWinnerPlayer();
             int statPlayerOneTie = gameBoard.getTieGame();
 
@@ -137,7 +133,7 @@ namespace CIS153_FinalProject_GroupA
 
             StreamWriter sw = new StreamWriter(filePath, true);
 
-            sw.WriteLineAsync(statPlayerOneMoves + "," + statPlayerOneOutcome + "," + statPlayerOneTie);
+            sw.WriteLineAsync(statPlayerOneOutcome + "," + statPlayerOneTie);
 
             sw.Close();
 

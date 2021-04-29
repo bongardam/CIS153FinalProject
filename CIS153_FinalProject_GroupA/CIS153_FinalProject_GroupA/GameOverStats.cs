@@ -9,13 +9,13 @@ namespace CIS153_FinalProject_GroupA
     public class GameOverStats
     {
         int gameWinner;
-        int gameMoves;
+        //int gameMoves;
         int gameSecondPlayer;
 
-        public GameOverStats(int gw, int gm, int gp)
+        public GameOverStats(int gw, int gp)
         {
             gameWinner = gw;
-            gameMoves = gm;
+            //gameMoves = gm;
             gameSecondPlayer = gp;
         }
 
@@ -24,10 +24,10 @@ namespace CIS153_FinalProject_GroupA
             return gameWinner;
         }
 
-        public int getGameMoves()
-        {
-            return gameMoves;
-        }
+        //public int getGameMoves()
+        //{
+        //    return gameMoves;
+        //}
 
         public int getGameSecondPlayer()
         {

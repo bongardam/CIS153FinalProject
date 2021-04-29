@@ -34,8 +34,8 @@ namespace CIS153_FinalProject_GroupA
             CenterToScreen();
             welcome = wel;
             CenterToScreen();
-            //readTextFilePO();           
-            //fillLabels();
+            readTextFilePO();           
+            fillLabels();
         }
 
         public void passedForm(Welcome wel)
@@ -73,7 +73,7 @@ namespace CIS153_FinalProject_GroupA
 
             StreamReader file = new StreamReader("../../Resources/PlayerOneStats.txt");
             string line = file.ReadLine();
-            int statPlayerOneMoves;
+            //int statPlayerOneMoves;
             int statPlayerOneOutcome;
             int statPlayerOneTie;
 
@@ -85,15 +85,16 @@ namespace CIS153_FinalProject_GroupA
             while (line != null)
             {
                 comma = line.IndexOf(delim);
-                statPlayerOneMoves = Int32.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
+                //statPlayerOneMoves = Int32.Parse(line.Substring(0, comma));
+                //line = line.Substring(comma + 1);
                 statPlayerOneOutcome = Int32.Parse(line.Substring(0, comma));
                 line = line.Substring(comma + 1);
                 statPlayerOneTie = Int32.Parse(line.Substring(0, comma));
 
-                newPlayerOneStats = new POStats(statPlayerOneMoves, statPlayerOneOutcome, statPlayerOneTie);
+                newPlayerOneStats = new POStats(statPlayerOneOutcome, statPlayerOneTie);
                 playerOneStats.Add(newPlayerOneStats);
                 line = file.ReadLine();
+                Console.WriteLine(statPlayerOneOutcome + " = " + statPlayerOneTie);
             }
             
         }

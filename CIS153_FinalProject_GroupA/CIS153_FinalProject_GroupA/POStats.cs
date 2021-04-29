@@ -8,22 +8,22 @@ namespace CIS153_FinalProject_GroupA
 {
     public class POStats
     {
-        int playerOneMoves;        
+        //int playerOneMoves;        
         int playerOneOutcome;
         int playerOneTie;
         
 
-        public POStats(int pm, int po, int pt)
+        public POStats(int po, int pt)
         {
-            playerOneMoves = pm;
+            //playerOneMoves = pm;
             playerOneOutcome = po;
             playerOneTie = pt;
         }
 
-        public int getPlayerOneMoves()
-        {
-            return playerOneMoves;
-        }     
+        //public int getPlayerOneMoves()
+        //{
+        //    return playerOneMoves;
+        //}     
 
         public int getPlayerOneOutcome()
         {

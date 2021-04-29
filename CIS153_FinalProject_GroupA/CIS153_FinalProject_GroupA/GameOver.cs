@@ -24,15 +24,15 @@ namespace CIS153_FinalProject_GroupA
         public GameOver()
         {
             InitializeComponent();
-            //readTextFileGOS();
-            //fillLabels();
+            readTextFileGOS();
+            fillLabels();
             CenterToScreen();
         }
         public GameOver(SinglePlayer sp)
         {
             InitializeComponent();
-            //readTextFileGOS();
-            //fillLabels();
+            readTextFileGOS();
+            fillLabels();
             CenterToScreen();
             singlePlayer = sp;
 
@@ -41,8 +41,8 @@ namespace CIS153_FinalProject_GroupA
         public GameOver(TwoPlayer tp)
         {
             InitializeComponent();
-            //readTextFileGOS();
-            //fillLabels();
+            readTextFileGOS();
+            fillLabels();
             CenterToScreen();
             twoPlayer = tp;
         }
@@ -80,7 +80,7 @@ namespace CIS153_FinalProject_GroupA
             StreamReader file = new StreamReader("../../Resources/GameOverStats.txt");
             string line = file.ReadLine();
             int statGameWinner;
-            int statGameMoves;
+            //int statGameMoves;
             int statGameSecondPlayer;            
 
             int comma;
@@ -93,15 +93,15 @@ namespace CIS153_FinalProject_GroupA
                 comma = line.IndexOf(delim);
                 statGameWinner = Int32.Parse(line.Substring(0, comma));
                 line = line.Substring(comma + 1);
-                statGameMoves = Int32.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
+                //statGameMoves = Int32.Parse(line.Substring(0, comma));
+                //line = line.Substring(comma + 1);
                 statGameSecondPlayer = Int32.Parse(line.Substring(0, comma));
                 
 
-                newGameOverStats = new GameOverStats(statGameWinner, statGameMoves, statGameSecondPlayer);               
+                newGameOverStats = new GameOverStats(statGameWinner, statGameSecondPlayer);               
                 gameOverStats.Add(newGameOverStats);
                 line = file.ReadLine();
-                Console.WriteLine(statGameWinner + " = " + statGameMoves + " = " + statGameSecondPlayer);
+                Console.WriteLine(statGameWinner + " = " + statGameSecondPlayer);
             }
             
         }
@@ -133,9 +133,10 @@ namespace CIS153_FinalProject_GroupA
         public void fillLabels()
         {
             int i = gameOverStats.Count-1;
-            int winner = gameOverStats[i].getGameWinner();
-            int moves = gameOverStats[i].getGameMoves();
+            int gameWinner = gameOverStats[i].getGameWinner();
+            //int moves = gameOverStats[i].getGameMoves();
             int gameSecondPlayer = gameOverStats[i].getGameSecondPlayer();
+            string winner;
             string player;
 
             if (gameSecondPlayer == 0)
@@ -150,11 +151,29 @@ namespace CIS153_FinalProject_GroupA
                 lbl_secondPlayer.Text = player.ToString();
             }
 
-            lbl_winner.Text = winner.ToString();
-            lbl_movesTotal.Text = moves.ToString();
+            if (gameWinner == 3)
+            {
+                winner = "Tie";
+                lbl_winner.Text = winner.ToString();
+            }
 
-            Console.WriteLine(gameOverStats[i].getGameWinner() + " = " + gameOverStats[i].getGameMoves() + " = " +  gameOverStats[i].getGameSecondPlayer());
-            Console.WriteLine(winner + " = " + moves + " = " + gameSecondPlayer);
+            if (gameWinner == 1)
+            {
+                winner = "Player";
+                lbl_winner.Text = winner.ToString();
+            }
+
+            if (gameWinner == 2)
+            {
+                winner = "Computer";
+                lbl_winner.Text = winner.ToString();
+            }
+
+            //lbl_winner.Text = winner.ToString();
+            //lbl_movesTotal.Text = moves.ToString();
+
+            Console.WriteLine(gameOverStats[i].getGameWinner() + " = " +  gameOverStats[i].getGameSecondPlayer());
+            Console.WriteLine(gameWinner + " = " + gameSecondPlayer);
         }
     }
 }

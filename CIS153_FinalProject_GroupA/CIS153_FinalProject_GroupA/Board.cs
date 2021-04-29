@@ -943,7 +943,7 @@ namespace CIS153_FinalProject_GroupA
             {
                 gameOver = true;
                 winnerPlayer = 0;
-                tieGame = 1;
+                tieGame = 3;
             }
         }
 
