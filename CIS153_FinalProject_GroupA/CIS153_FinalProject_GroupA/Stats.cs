@@ -209,5 +209,10 @@ namespace CIS153_FinalProject_GroupA
             lbl_gamesTiedDisplay.Text = POTies.ToString();
             lbl_gamesPercentDisplay.Text = POPercent.ToString("0") + "%";
         }
+
+        private void btn_mainMenu_Click(object sender, EventArgs e)
+        {
+            loadWelcomeForm();
+        }
     }
 }

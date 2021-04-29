@@ -50,6 +50,13 @@ namespace CIS153_FinalProject_GroupA
             this.Hide();
         }
 
+        public void loadGameOverForm()
+        {
+            GameOver formToLoad = new GameOver(this);
+            formToLoad.Show();
+            this.Hide();
+        }
+
         /// THIS MAY BE USED LATER ON
         //private void createBoard(int[,] board)
         //{
@@ -197,36 +204,71 @@ namespace CIS153_FinalProject_GroupA
         private void btn_0_0_Click(object sender, EventArgs e)
         {
             btn_Click(0);
+
+            if (gameBoard.getGameOver() == true)
+            {
+                loadGameOverForm();
+            }
         }
 
         private void btn_0_1_Click(object sender, EventArgs e)
         {
             btn_Click(1);
+
+            if (gameBoard.getGameOver() == true)
+            {
+                loadGameOverForm();
+            }
         }
 
         private void btn_0_2_Click(object sender, EventArgs e)
         {
             btn_Click(2);
+
+            if (gameBoard.getGameOver() == true)
+            {
+                loadGameOverForm();
+            }
         }
 
         private void btn_0_3_Click(object sender, EventArgs e)
         {
             btn_Click(3);
+
+            if (gameBoard.getGameOver() == true)
+            {
+                loadGameOverForm();
+            }
         }
 
         private void btn_0_4_Click(object sender, EventArgs e)
         {
             btn_Click(4);
+
+            if (gameBoard.getGameOver() == true)
+            {
+                loadGameOverForm();
+            }
         }
 
         private void btn_0_5_Click(object sender, EventArgs e)
         {
             btn_Click(5);
+
+            if (gameBoard.getGameOver() == true)
+            {
+                loadGameOverForm();
+            }
         }
 
         private void btn_0_6_Click(object sender, EventArgs e)
         {
             btn_Click(6);
+
+            if (gameBoard.getGameOver() == true)
+            {
+                loadGameOverForm();
+            }
         }
 
         public void aibtnClick(int c)
@@ -236,6 +278,7 @@ namespace CIS153_FinalProject_GroupA
 
         public void checkForWinner()
         {
+            gameBoard.checkForTie();
             gameBoard.horizontalRightCheck();
             gameBoard.verticalUpperCheck();
             gameBoard.diagonalUpperRightCheck();

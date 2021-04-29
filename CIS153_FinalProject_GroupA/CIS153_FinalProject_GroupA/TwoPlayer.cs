@@ -275,8 +275,8 @@ namespace CIS153_FinalProject_GroupA
 
             }
 
-            
 
+            gameBoard.checkForTie();
             gameBoard.horizontalRightCheck();
             //gameBoard.horizontalLeftCheck();
             gameBoard.verticalUpperCheck();

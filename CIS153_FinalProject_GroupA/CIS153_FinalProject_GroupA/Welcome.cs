@@ -93,7 +93,8 @@ namespace CIS153_FinalProject_GroupA
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+            Environment.Exit(1);
         }
 
         public void loadOneForm()

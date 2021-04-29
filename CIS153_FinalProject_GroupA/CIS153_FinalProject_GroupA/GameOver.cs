@@ -29,6 +29,17 @@ namespace CIS153_FinalProject_GroupA
             readTextFilePO();
             readTextFilePT();
             readTextFilePC();
+            CenterToScreen();
+        }
+        public GameOver(SinglePlayer sp)
+        {
+            InitializeComponent();
+            readTextFilePO();
+            readTextFilePT();
+            readTextFilePC();
+            CenterToScreen();
+            singlePlayer = sp;
+
         }
 
         public GameOver(TwoPlayer tp)
@@ -37,15 +48,24 @@ namespace CIS153_FinalProject_GroupA
             readTextFilePO();
             readTextFilePT();
             readTextFilePC();
+            CenterToScreen();
             twoPlayer = tp;
+        }
+
+        public void passedForm(SinglePlayer sp)
+        {
+            singlePlayer = sp;
         }
 
         public void passedForm(TwoPlayer tp)
         {
             twoPlayer = tp;
         }
-
-
+        public new void CenterToScreen()
+        {
+            base.CenterToScreen();
+        }
+       
         public void readTextFilePO()
         {
             string fileContent = "";
@@ -188,8 +208,15 @@ namespace CIS153_FinalProject_GroupA
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
-            loadWelcomeForm();
+
+            //Application.Exit();
+            Environment.Exit(1);
+
         }
+        //private void GameOver_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    loadWelcomeForm();
+        //}
 
         public void loadWelcomeForm()
         {

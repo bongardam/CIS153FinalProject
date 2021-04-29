@@ -18,12 +18,13 @@ namespace CIS153_FinalProject_GroupA
         private const int numRows = 6;
         private const int numCols = 7;
         Cell[,] gameBoard = new Cell[numRows, numCols];
-    
+        int playerMoves = 0;
+
         bool gameOver;
 
         //bool playerTurn;
         int playerTurn = 0;
-
+        
         int playerColor;
         int aiColor;
 
@@ -35,6 +36,11 @@ namespace CIS153_FinalProject_GroupA
         public int getNumCols()
         {
             return numCols;
+        }
+
+        public int getPlayerMoves()
+        {
+            return playerMoves;
         }
 
         public bool getGameOver()
@@ -65,6 +71,7 @@ namespace CIS153_FinalProject_GroupA
         public void changeTurn()
         {
             playerTurn++;
+            playerMoves++;
             //Console.WriteLine("PlayerTurn: " + playerTurn);
             //Console.WriteLine("PlayerTurn % 2: " + playerTurn % 2);
         }
@@ -917,6 +924,15 @@ namespace CIS153_FinalProject_GroupA
         // checks if the player variable is equal to the cell in the same row
         // and column plus 1, plus 2, and plus 3. Will not execute if a cell's
         // player is set to 0
+
+        public void checkForTie()
+        {
+            if (playerMoves == 42)
+            {
+                gameOver = true;
+            }
+        }
+
 
         public void horizontalRightCheck()
         {

@@ -37,6 +37,7 @@
             this.lbl_gamesPercentDisplay = new System.Windows.Forms.Label();
             this.lbl_gamesTiedDisplay = new System.Windows.Forms.Label();
             this.lbl_gamesWonDisplay = new System.Windows.Forms.Label();
+            this.btn_mainMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_gameStatsHeader
@@ -95,7 +96,7 @@
             this.lbl_gamesPlayedDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_gamesPlayedDisplay.Location = new System.Drawing.Point(298, 165);
             this.lbl_gamesPlayedDisplay.Name = "lbl_gamesPlayedDisplay";
-            this.lbl_gamesPlayedDisplay.Size = new System.Drawing.Size(117, 20);
+            this.lbl_gamesPlayedDisplay.Size = new System.Drawing.Size(146, 25);
             this.lbl_gamesPlayedDisplay.TabIndex = 8;
             this.lbl_gamesPlayedDisplay.Text = "games played";
             // 
@@ -105,7 +106,7 @@
             this.lbl_gamesPercentDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_gamesPercentDisplay.Location = new System.Drawing.Point(298, 334);
             this.lbl_gamesPercentDisplay.Name = "lbl_gamesPercentDisplay";
-            this.lbl_gamesPercentDisplay.Size = new System.Drawing.Size(81, 20);
+            this.lbl_gamesPercentDisplay.Size = new System.Drawing.Size(101, 25);
             this.lbl_gamesPercentDisplay.TabIndex = 9;
             this.lbl_gamesPercentDisplay.Text = "games %";
             // 
@@ -115,7 +116,7 @@
             this.lbl_gamesTiedDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_gamesTiedDisplay.Location = new System.Drawing.Point(298, 281);
             this.lbl_gamesTiedDisplay.Name = "lbl_gamesTiedDisplay";
-            this.lbl_gamesTiedDisplay.Size = new System.Drawing.Size(94, 20);
+            this.lbl_gamesTiedDisplay.Size = new System.Drawing.Size(117, 25);
             this.lbl_gamesTiedDisplay.TabIndex = 10;
             this.lbl_gamesTiedDisplay.Text = "games tied";
             // 
@@ -129,11 +130,23 @@
             this.lbl_gamesWonDisplay.TabIndex = 11;
             this.lbl_gamesWonDisplay.Text = "games won";
             // 
+            // btn_mainMenu
+            // 
+            this.btn_mainMenu.Location = new System.Drawing.Point(335, 442);
+            this.btn_mainMenu.Name = "btn_mainMenu";
+            this.btn_mainMenu.Size = new System.Drawing.Size(328, 37);
+            this.btn_mainMenu.TabIndex = 12;
+            this.btn_mainMenu.Text = "Main Menu";
+            this.btn_mainMenu.UseVisualStyleBackColor = true;
+            this.btn_mainMenu.Click += new System.EventHandler(this.btn_mainMenu_Click);
+            // 
             // Stats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.ControlBox = false;
+            this.Controls.Add(this.btn_mainMenu);
             this.Controls.Add(this.lbl_gamesWonDisplay);
             this.Controls.Add(this.lbl_gamesTiedDisplay);
             this.Controls.Add(this.lbl_gamesPercentDisplay);
@@ -162,5 +175,6 @@
         private System.Windows.Forms.Label lbl_gamesPercentDisplay;
         private System.Windows.Forms.Label lbl_gamesTiedDisplay;
         private System.Windows.Forms.Label lbl_gamesWonDisplay;
+        private System.Windows.Forms.Button btn_mainMenu;
     }
 }
