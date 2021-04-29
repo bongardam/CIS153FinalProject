@@ -16,9 +16,7 @@ namespace CIS153_FinalProject_GroupA
         private Welcome welcome;
 
         public List<POStats> playerOneStats = new List<POStats>();
-        //public List<PTStats> playerTwoStats = new List<PTStats>();
-        public List<PCStats> playerCompStats = new List<PCStats>();
-
+       
         public Stats()
         {
             InitializeComponent();
@@ -36,10 +34,8 @@ namespace CIS153_FinalProject_GroupA
             CenterToScreen();
             welcome = wel;
             CenterToScreen();
-            readTextFilePO();
-            //readTextFilePT();
-            readTextFilePC();
-            fillLabels();
+            //readTextFilePO();           
+            //fillLabels();
         }
 
         public void passedForm(Welcome wel)
@@ -78,7 +74,6 @@ namespace CIS153_FinalProject_GroupA
             StreamReader file = new StreamReader("../../Resources/PlayerOneStats.txt");
             string line = file.ReadLine();
             int statPlayerOneMoves;
-            int statPlayerOneGames;
             int statPlayerOneOutcome;
             int statPlayerOneTie;
 
@@ -92,13 +87,11 @@ namespace CIS153_FinalProject_GroupA
                 comma = line.IndexOf(delim);
                 statPlayerOneMoves = Int32.Parse(line.Substring(0, comma));
                 line = line.Substring(comma + 1);
-                statPlayerOneGames = Int32.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
                 statPlayerOneOutcome = Int32.Parse(line.Substring(0, comma));
                 line = line.Substring(comma + 1);
                 statPlayerOneTie = Int32.Parse(line.Substring(0, comma));
 
-                newPlayerOneStats = new POStats(statPlayerOneMoves, statPlayerOneGames, statPlayerOneOutcome, statPlayerOneTie);
+                newPlayerOneStats = new POStats(statPlayerOneMoves, statPlayerOneOutcome, statPlayerOneTie);
                 playerOneStats.Add(newPlayerOneStats);
                 line = file.ReadLine();
             }
@@ -106,101 +99,12 @@ namespace CIS153_FinalProject_GroupA
         }
         
 
-        //public void readTextFilePT()
-        //{
-        //    string fileContent = "";
-        //    playerTwoStats = new List<PTStats>();
-
-
-        //    try
-        //    {
-        //        fileContent = CIS153_FinalProject_GroupA.Properties.Resources.PlayerTwoStats;
-        //        Console.WriteLine("Success");
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        Console.WriteLine("Error loading File: " + e.Message);
-        //    }
-
-        //    StreamReader file = new StreamReader("../../Resources/PlayerTwoStats.txt");
-        //    string line = file.ReadLine();
-        //    int statPlayerTwoMoves;
-        //    int statPlayerTwoGames;
-        //    int statPlayerTwoOutcome;
-
-        //    int comma;
-        //    char delim = ',';
-
-        //    PTStats newPlayerTwoStats;
-
-        //    while (line != null)
-        //    {
-        //        comma = line.IndexOf(delim);
-        //        statPlayerTwoMoves = Int32.Parse(line.Substring(0, comma));
-        //        line = line.Substring(comma + 1);
-        //        statPlayerTwoGames = Int32.Parse(line.Substring(0, comma));
-        //        line = line.Substring(comma + 1);
-        //        statPlayerTwoOutcome = Int32.Parse(line.Substring(0, comma));
-
-        //        newPlayerTwoStats = new PTStats(statPlayerTwoMoves, statPlayerTwoGames, statPlayerTwoOutcome);
-        //        playerTwoStats.Add(newPlayerTwoStats);
-        //        line = file.ReadLine();
-        //    }
-
-        //}
-
-        public void readTextFilePC()
-        {
-            string fileContent = "";
-            playerCompStats = new List<PCStats>();
-
-
-            try
-            {
-                fileContent = CIS153_FinalProject_GroupA.Properties.Resources.CompStats;
-                Console.WriteLine("Success");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error loading File: " + e.Message);
-            }
-
-            StreamReader file = new StreamReader("../../Resources/CompStats.txt");
-            string line = file.ReadLine();
-            int statCompMoves;
-            int statCompGames;
-            int statCompOutcome;
-            int statCompTie;
-
-            int comma;
-            char delim = ',';
-
-            PCStats newPlayerCompStats;
-
-            while (line != null)
-            {
-                comma = line.IndexOf(delim);
-                statCompMoves = Int32.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
-                statCompGames = Int32.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
-                statCompOutcome = Int32.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
-                statCompTie = Int32.Parse(line.Substring(0, comma));
-
-                newPlayerCompStats = new PCStats(statCompMoves, statCompGames, statCompOutcome, statCompTie);
-                playerCompStats.Add(newPlayerCompStats);
-                line = file.ReadLine();
-            }
-
-        }
-
         public void fillLabels()
         {
             int count = playerOneStats.Count;
             int POWins = playerOneStats.Sum(item => item.getPlayerOneOutcome());
             int POTies = playerOneStats.Sum(item => item.getPlayerOneTie());
-            int PCWins = playerCompStats.Sum(item => item.getCompOutcome());
+            int PCWins = playerOneStats.Count - POWins;
             double POPercent = ((float)POWins / count) * 100;
 
 

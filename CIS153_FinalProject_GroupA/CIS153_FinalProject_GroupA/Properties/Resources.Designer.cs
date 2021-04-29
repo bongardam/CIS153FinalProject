@@ -71,7 +71,13 @@ namespace CIS153_FinalProject_GroupA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 0,0,0,0.
+        ///   Looks up a localized string similar to 0,0,0,0
+        ///0,0,0,1
+        ///0,0,0,0
+        ///0,0,1,0
+        ///0,0,0,0
+        ///0,0,0,1
+        ///0,0,0,0.
         /// </summary>
         internal static string CompStats {
             get {
@@ -150,6 +156,15 @@ namespace CIS153_FinalProject_GroupA.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 0,0,0.
+        /// </summary>
+        internal static string GameOverStats {
+            get {
+                return ResourceManager.GetString("GameOverStats", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Multiplayer75Pixels {
@@ -160,14 +175,13 @@ namespace CIS153_FinalProject_GroupA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 0,0,0,0
+        ///   Looks up a localized string similar to 0,0,1,0
+        ///0,0,0,1
+        ///0,0,1,0
         ///0,0,0,0
-        ///0,0,0,0
-        ///0,0,0,0
-        ///0,0,0,0
-        ///0,0,0,0
-        ///0,0,0,0
-        ///.
+        ///0,0,1,0
+        ///0,0,0,1
+        ///0,0,1,0.
         /// </summary>
         internal static string PlayerOneStats {
             get {

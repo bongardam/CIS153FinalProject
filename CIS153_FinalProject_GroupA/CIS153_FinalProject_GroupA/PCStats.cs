@@ -9,16 +9,14 @@ namespace CIS153_FinalProject_GroupA
     public class PCStats
     {
         int compMoves;
-        int compGames;
         int compOutcome;
         int compTie;
 
         public int statCompOutcome { get; internal set; }
 
-        public PCStats(int cm, int cg, int co, int ct)
+        public PCStats(int cm, int co, int ct)
         {            
             compMoves = cm;
-            compGames = cg;
             compOutcome = co;
             compTie = ct;
         }
@@ -26,12 +24,7 @@ namespace CIS153_FinalProject_GroupA
         public int getCompMoves()
         {
             return compMoves;
-        }
-
-        public int getCompGames()
-        {
-            return compGames;
-        }
+        }        
 
         public int getCompOutcome()
         {

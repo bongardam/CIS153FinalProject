@@ -15,10 +15,8 @@ namespace CIS153_FinalProject_GroupA
     {
 
         //class variables
-        
-        public List<POStats> playerOneStats = new List<POStats>();
-        //public List<PTStats> playerTwoStats = new List<PTStats>();
-        public List<PCStats> playerCompStats = new List<PCStats>();
+
+        public List<GameOverStats> gameOverStats = new List<GameOverStats>();
         private Welcome welcome;
         private SinglePlayer singlePlayer;
         private TwoPlayer twoPlayer;
@@ -26,17 +24,15 @@ namespace CIS153_FinalProject_GroupA
         public GameOver()
         {
             InitializeComponent();
-            readTextFilePO();
-            readTextFilePT();
-            readTextFilePC();
+            //readTextFileGOS();
+            //fillLabels();
             CenterToScreen();
         }
         public GameOver(SinglePlayer sp)
         {
             InitializeComponent();
-            readTextFilePO();
-            readTextFilePT();
-            readTextFilePC();
+            //readTextFileGOS();
+            //fillLabels();
             CenterToScreen();
             singlePlayer = sp;
 
@@ -45,9 +41,8 @@ namespace CIS153_FinalProject_GroupA
         public GameOver(TwoPlayer tp)
         {
             InitializeComponent();
-            readTextFilePO();
-            readTextFilePT();
-            readTextFilePC();
+            //readTextFileGOS();
+            //fillLabels();
             CenterToScreen();
             twoPlayer = tp;
         }
@@ -66,15 +61,15 @@ namespace CIS153_FinalProject_GroupA
             base.CenterToScreen();
         }
        
-        public void readTextFilePO()
+        public void readTextFileGOS()
         {
             string fileContent = "";
-            playerOneStats = new List<POStats>();
+            gameOverStats = new List<GameOverStats>();
 
 
             try
             {
-                fileContent = CIS153_FinalProject_GroupA.Properties.Resources.PlayerOneStats;
+                fileContent = CIS153_FinalProject_GroupA.Properties.Resources.GameOverStats;
                 Console.WriteLine("Success");
             }
             catch (Exception e)
@@ -82,124 +77,36 @@ namespace CIS153_FinalProject_GroupA
                 Console.WriteLine("Error loading File: " + e.Message);
             }
 
-            StreamReader file = new StreamReader("../../Resources/PlayerOneStats.txt");
+            StreamReader file = new StreamReader("../../Resources/GameOverStats.txt");
             string line = file.ReadLine();
-            int statPlayerOneMoves;
-            int statPlayerOneGames;
-            int statPlayerOneOutcome;
-            int statPlayerOneTie;
+            int statGameWinner;
+            int statGameMoves;
+            int statGameSecondPlayer;            
 
             int comma;
             char delim = ',';
 
-            POStats newPlayerOneStats;
+            GameOverStats newGameOverStats;
 
             while (line != null)
             {
                 comma = line.IndexOf(delim);
-                statPlayerOneMoves = Int32.Parse(line.Substring(0, comma));
+                statGameWinner = Int32.Parse(line.Substring(0, comma));
                 line = line.Substring(comma + 1);
-                statPlayerOneGames = Int32.Parse(line.Substring(0, comma));
+                statGameMoves = Int32.Parse(line.Substring(0, comma));
                 line = line.Substring(comma + 1);
-                statPlayerOneOutcome = Int32.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
-                statPlayerOneTie = Int32.Parse(line.Substring(0, comma));
+                statGameSecondPlayer = Int32.Parse(line.Substring(0, comma));
+                
 
-                newPlayerOneStats = new POStats(statPlayerOneMoves, statPlayerOneGames, statPlayerOneOutcome, statPlayerOneTie);
-                playerOneStats.Add(newPlayerOneStats);
+                newGameOverStats = new GameOverStats(statGameWinner, statGameMoves, statGameSecondPlayer);               
+                gameOverStats.Add(newGameOverStats);
                 line = file.ReadLine();
+                Console.WriteLine(statGameWinner + " = " + statGameMoves + " = " + statGameSecondPlayer);
             }
-
+            
         }
 
-        public void readTextFilePT()
-        {
-            string fileContent = "";
-            //playerTwoStats = new List<PTStats>();
-
-
-            try
-            {
-                fileContent = CIS153_FinalProject_GroupA.Properties.Resources.PlayerTwoStats;
-                Console.WriteLine("Success");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error loading File: " + e.Message);
-            }
-
-            StreamReader file = new StreamReader("../../Resources/PlayerTwoStats.txt");
-            string line = file.ReadLine();
-            int statPlayerTwoMoves;
-            int statPlayerTwoGames;
-            int statPlayerTwoOutcome;
-
-            int comma;
-            char delim = ',';
-
-            //PTStats newPlayerTwoStats;
-
-            while (line != null)
-            {
-                comma = line.IndexOf(delim);
-                statPlayerTwoMoves = Int32.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
-                statPlayerTwoGames = Int32.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
-                statPlayerTwoOutcome = Int32.Parse(line.Substring(0, comma));
-
-               // newPlayerTwoStats = new PTStats(statPlayerTwoMoves, statPlayerTwoGames, statPlayerTwoOutcome);
-               // playerTwoStats.Add(newPlayerTwoStats);
-                line = file.ReadLine();
-            }
-
-        }
-
-        public void readTextFilePC()
-        {
-            string fileContent = "";
-            playerCompStats = new List<PCStats>();
-
-
-            try
-            {
-                fileContent = CIS153_FinalProject_GroupA.Properties.Resources.CompStats;
-                Console.WriteLine("Success");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error loading File: " + e.Message);
-            }
-
-            StreamReader file = new StreamReader("../../Resources/CompStats.txt");
-            string line = file.ReadLine();
-            int statCompMoves;
-            int statCompGames;
-            int statCompOutcome;
-            int statCompTie;
-
-            int comma;
-            char delim = ',';
-
-            PCStats newPlayerCompStats;
-
-            while (line != null)
-            {
-                comma = line.IndexOf(delim);
-                statCompMoves = Int32.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
-                statCompGames = Int32.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
-                statCompOutcome = Int32.Parse(line.Substring(0, comma));
-                line = line.Substring(comma + 1);
-                statCompTie = Int32.Parse(line.Substring(0, comma));
-
-                newPlayerCompStats = new PCStats(statCompMoves, statCompGames, statCompOutcome, statCompTie);
-                playerCompStats.Add(newPlayerCompStats);
-                line = file.ReadLine();
-            }
-
-        }
+        
 
         private void btn_mainMenu_Click(object sender, EventArgs e)
         {
@@ -207,16 +114,9 @@ namespace CIS153_FinalProject_GroupA
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
-        {
-
-            //Application.Exit();
+        {           
             Environment.Exit(1);
-
-        }
-        //private void GameOver_FormClosing(object sender, FormClosingEventArgs e)
-        //{
-        //    loadWelcomeForm();
-        //}
+        }        
 
         public void loadWelcomeForm()
         {
@@ -228,6 +128,33 @@ namespace CIS153_FinalProject_GroupA
         private void btn_showBoard_Click(object sender, EventArgs e)
         {
             //move left and show board on right?
+        }
+
+        public void fillLabels()
+        {
+            int i = gameOverStats.Count-1;
+            int winner = gameOverStats[i].getGameWinner();
+            int moves = gameOverStats[i].getGameMoves();
+            int gameSecondPlayer = gameOverStats[i].getGameSecondPlayer();
+            string player;
+
+            if (gameSecondPlayer == 0)
+            {
+                player = "COMPUTER";
+                lbl_secondPlayer.Text = player.ToString();
+            }
+
+            else if (gameSecondPlayer == 1)
+            {
+                player = "PLAYER 2";
+                lbl_secondPlayer.Text = player.ToString();
+            }
+
+            lbl_winner.Text = winner.ToString();
+            lbl_movesTotal.Text = moves.ToString();
+
+            Console.WriteLine(gameOverStats[i].getGameWinner() + " = " + gameOverStats[i].getGameMoves() + " = " +  gameOverStats[i].getGameSecondPlayer());
+            Console.WriteLine(winner + " = " + moves + " = " + gameSecondPlayer);
         }
     }
 }

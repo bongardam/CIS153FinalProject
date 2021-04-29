@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 //======================================Changes =============================================//
 //added code to create a new board and set up a came for every constructor that launches this form
@@ -21,6 +22,10 @@ namespace CIS153_FinalProject_GroupA
     {
         private Welcome welcome;
         private Board gameBoard;
+        private Cell cell;
+        //private GameOverStats gameOverStats;
+        //List<GameOverStats> GameOverList = new List<GameOverStats>();
+        
 
         bool column0Full = false;
         bool column1Full = false;
@@ -76,6 +81,24 @@ namespace CIS153_FinalProject_GroupA
             GameOver formToLoad = new GameOver(this);
             formToLoad.Show();
             this.Hide();
+        }
+
+        public void WriteToText()
+        {
+            int gameWinner = gameBoard.getWinnerPlayer();
+            int gameMoves = gameBoard.getPlayerMoves();
+            int secondPlayerID = 1;
+
+            string filePath = "../../Resources/GameOverStats.txt";
+
+            StreamWriter sw = new StreamWriter(filePath, true);
+
+            sw.WriteLineAsync(gameWinner + "," + gameMoves + "," + secondPlayerID);
+
+            sw.Close();
+
+            this.Close();
+            
         }
 
 
@@ -156,6 +179,7 @@ namespace CIS153_FinalProject_GroupA
 
             if (gameBoard.getGameOver() == true)
             {
+                WriteToText();
                 loadGameOverForm();
             }
         }
@@ -166,6 +190,7 @@ namespace CIS153_FinalProject_GroupA
 
             if (gameBoard.getGameOver() == true)
             {
+                WriteToText();
                 loadGameOverForm();
             }
         }
@@ -176,6 +201,7 @@ namespace CIS153_FinalProject_GroupA
 
             if (gameBoard.getGameOver() == true)
             {
+                WriteToText();
                 loadGameOverForm();
             }
         }
@@ -186,6 +212,7 @@ namespace CIS153_FinalProject_GroupA
 
             if (gameBoard.getGameOver() == true)
             {
+                WriteToText();
                 loadGameOverForm();
             }
         }
@@ -196,6 +223,7 @@ namespace CIS153_FinalProject_GroupA
 
             if (gameBoard.getGameOver() == true)
             {
+                WriteToText();
                 loadGameOverForm();
             }
         }
@@ -206,6 +234,7 @@ namespace CIS153_FinalProject_GroupA
 
             if (gameBoard.getGameOver() == true)
             {
+                WriteToText();
                 loadGameOverForm();
             }
         }
@@ -216,6 +245,7 @@ namespace CIS153_FinalProject_GroupA
 
             if (gameBoard.getGameOver() == true)
             {
+                WriteToText();
                 loadGameOverForm();
             }
         }

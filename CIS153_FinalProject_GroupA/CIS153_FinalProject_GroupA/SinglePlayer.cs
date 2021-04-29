@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace CIS153_FinalProject_GroupA
 {
@@ -105,6 +106,42 @@ namespace CIS153_FinalProject_GroupA
             }
 
 
+        }
+
+        public void WriteToTextGO()
+        {
+            int gameWinner = gameBoard.getWinnerPlayer();
+            int gameMoves = gameBoard.getPlayerMoves();
+            int secondPlayerID = 0;
+
+            string filePath = "../../Resources/GameOverStats.txt";
+
+            StreamWriter sw = new StreamWriter(filePath, true);
+
+            sw.WriteLineAsync(gameWinner + "," + gameMoves + "," + secondPlayerID);
+
+            sw.Close();
+
+            this.Close();
+        }
+
+        public void WriteToTextStats()
+        {
+            
+
+            int statPlayerOneMoves = gameBoard.getPlayerMoves();
+            int statPlayerOneOutcome = gameBoard.getWinnerPlayer();
+            int statPlayerOneTie = gameBoard.getTieGame();
+
+            string filePath = "../../Resources/PlayerOneStats.txt";
+
+            StreamWriter sw = new StreamWriter(filePath, true);
+
+            sw.WriteLineAsync(statPlayerOneMoves + "," + statPlayerOneOutcome + "," + statPlayerOneTie);
+
+            sw.Close();
+
+            this.Close();
         }
 
         private void SinglePlayer_Paint(object sender, PaintEventArgs e)
@@ -207,6 +244,7 @@ namespace CIS153_FinalProject_GroupA
 
             if (gameBoard.getGameOver() == true)
             {
+                WriteToTextGO();
                 loadGameOverForm();
             }
         }
@@ -217,6 +255,8 @@ namespace CIS153_FinalProject_GroupA
 
             if (gameBoard.getGameOver() == true)
             {
+                WriteToTextGO();
+                WriteToTextStats();
                 loadGameOverForm();
             }
         }
@@ -227,6 +267,8 @@ namespace CIS153_FinalProject_GroupA
 
             if (gameBoard.getGameOver() == true)
             {
+                WriteToTextGO();
+                WriteToTextStats();
                 loadGameOverForm();
             }
         }
@@ -237,6 +279,8 @@ namespace CIS153_FinalProject_GroupA
 
             if (gameBoard.getGameOver() == true)
             {
+                WriteToTextGO();
+                WriteToTextStats();
                 loadGameOverForm();
             }
         }
@@ -247,6 +291,8 @@ namespace CIS153_FinalProject_GroupA
 
             if (gameBoard.getGameOver() == true)
             {
+                WriteToTextGO();
+                WriteToTextStats();
                 loadGameOverForm();
             }
         }
@@ -257,6 +303,8 @@ namespace CIS153_FinalProject_GroupA
 
             if (gameBoard.getGameOver() == true)
             {
+                WriteToTextGO();
+                WriteToTextStats();
                 loadGameOverForm();
             }
         }
@@ -267,6 +315,8 @@ namespace CIS153_FinalProject_GroupA
 
             if (gameBoard.getGameOver() == true)
             {
+                WriteToTextGO();
+                WriteToTextStats();
                 loadGameOverForm();
             }
         }

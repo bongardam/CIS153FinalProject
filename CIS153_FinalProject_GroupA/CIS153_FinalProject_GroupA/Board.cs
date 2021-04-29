@@ -19,7 +19,9 @@ namespace CIS153_FinalProject_GroupA
         private const int numCols = 7;
         Cell[,] gameBoard = new Cell[numRows, numCols];
         int playerMoves = 0;
-
+        int winnerPlayer;
+        int tieGame = 0;
+        
         bool gameOver;
 
         //bool playerTurn;
@@ -41,6 +43,16 @@ namespace CIS153_FinalProject_GroupA
         public int getPlayerMoves()
         {
             return playerMoves;
+        }
+
+        public int getWinnerPlayer()
+        {
+            return winnerPlayer;
+        }
+
+        public int getTieGame()
+        {
+            return tieGame;
         }
 
         public bool getGameOver()
@@ -930,6 +942,8 @@ namespace CIS153_FinalProject_GroupA
             if (playerMoves == 42)
             {
                 gameOver = true;
+                winnerPlayer = 0;
+                tieGame = 1;
             }
         }
 
@@ -961,6 +975,7 @@ namespace CIS153_FinalProject_GroupA
                         //MessageBox.Show("Player " + p + "Wins!");
                         //twoPlayer.loadGameOverForm();
                         gameOver = true;
+                        winnerPlayer = p;
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
                 }
@@ -994,7 +1009,8 @@ namespace CIS153_FinalProject_GroupA
                             Button b = cell.getButton();
                             b.Enabled = false;
                         }
-
+                        gameOver = true;
+                        winnerPlayer = p;
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
                 }
@@ -1029,6 +1045,7 @@ namespace CIS153_FinalProject_GroupA
                         //MessageBox.Show("Player " + p + "Wins!");
                         //twoPlayer.loadGameOverForm();
                         gameOver = true;
+                        winnerPlayer = p;
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
                 }
@@ -1063,6 +1080,7 @@ namespace CIS153_FinalProject_GroupA
                         //MessageBox.Show("Player " + p + "Wins!");
                         //twoPlayer.loadGameOverForm();
                         gameOver = true;
+                        winnerPlayer = p;
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
                 }
@@ -1099,6 +1117,7 @@ namespace CIS153_FinalProject_GroupA
                         //MessageBox.Show("Player " + p + "Wins!");
                         //twoPlayer.loadGameOverForm();
                         gameOver = true;
+                        winnerPlayer = p;
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
                       
@@ -1135,6 +1154,7 @@ namespace CIS153_FinalProject_GroupA
                         //MessageBox.Show("Player " + p + "Wins!");
                         //twoPlayer.loadGameOverForm();
                         gameOver = true;
+                        winnerPlayer = p;
                         Console.WriteLine("Player : " + p + " Wins!");
                     }
 
