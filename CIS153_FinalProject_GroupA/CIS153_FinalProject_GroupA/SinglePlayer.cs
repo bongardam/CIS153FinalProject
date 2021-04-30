@@ -15,6 +15,7 @@ namespace CIS153_FinalProject_GroupA
     {
         private Welcome welcome;
         private Board gameBoard;
+        bool thereIsAWinner = false;
         public SinglePlayer()
         {
             InitializeComponent();
@@ -199,15 +200,17 @@ namespace CIS153_FinalProject_GroupA
 
             //This is called so that the next action taken is by player 2
 
-            gameBoard.compTryToBeatPlayer();
-            gameBoard.finalCompCheckAgainstPlayer();
-            gameBoard.compTripleCheckFightPlayer();
-            gameBoard.compDoubleCheck();
-            gameBoard.compSingleCheck();
-            updateCompTurn();
+            if (gameBoard.getGameOver() == false)
+            {
+                gameBoard.compTryToBeatPlayer();
+                gameBoard.finalCompCheckAgainstPlayer();
+                gameBoard.compTripleCheckFightPlayer();
+                gameBoard.compDoubleCheck();
+                gameBoard.compSingleCheck();
+                updateCompTurn();
 
-            checkForWinner();
-            
+                checkForWinner();
+            }
 
         }
 

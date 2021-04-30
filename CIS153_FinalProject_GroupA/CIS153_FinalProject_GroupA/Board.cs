@@ -22,7 +22,7 @@ namespace CIS153_FinalProject_GroupA
         int winnerPlayer;
         int tieGame = 0;
         
-        bool gameOver;
+        bool gameOver = false;
 
         //bool playerTurn;
         int playerTurn = 0;
