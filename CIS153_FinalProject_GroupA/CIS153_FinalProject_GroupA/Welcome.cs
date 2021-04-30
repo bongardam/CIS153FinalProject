@@ -45,12 +45,16 @@ namespace CIS153_FinalProject_GroupA
         {
             InitializeComponent();
             CenterToScreen();
+            pictureBox_logo.Parent = pictureBox_bg;
+            pictureBox_logo.BackColor = Color.Transparent;
             stats = st;
         }
         public Welcome(GameOver go)
         {
             InitializeComponent();
             CenterToScreen();
+            pictureBox_logo.Parent = pictureBox_bg;
+            pictureBox_logo.BackColor = Color.Transparent;
             gameOver = go;
         }
         public void passedForm(SinglePlayer sp)

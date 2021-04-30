@@ -21,12 +21,14 @@ namespace CIS153_FinalProject_GroupA
         private SinglePlayer singlePlayer;
         private TwoPlayer twoPlayer;
 
-        public GameOver()
+        public GameOver(Welcome wel)
         {
             InitializeComponent();
             readTextFileGOS();
             fillLabels();
             CenterToScreen();
+
+            welcome = wel;
         }
         public GameOver(SinglePlayer sp)
         {
@@ -110,7 +112,22 @@ namespace CIS153_FinalProject_GroupA
 
         private void btn_mainMenu_Click(object sender, EventArgs e)
         {
-            loadWelcomeForm();
+            welcomeLoadForm();
+        }
+
+        private void welcomeLoadForm()
+        {
+            Welcome wel = new Welcome(this);
+            wel.Show();
+            this.Hide();
+            if (twoPlayer == null)
+            {
+                singlePlayer.Hide();
+            }    
+            else if (singlePlayer == null)
+            {
+                twoPlayer.Hide();
+            }
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -118,16 +135,10 @@ namespace CIS153_FinalProject_GroupA
             Environment.Exit(1);
         }        
 
-        public void loadWelcomeForm()
-        {
-            Welcome formToLoad = new Welcome(this);
-            formToLoad.Show();
-            this.Hide();
-        }
-
         private void btn_showBoard_Click(object sender, EventArgs e)
         {
             //move left and show board on right?
+            this.Location = new Point(165, 125);
         }
 
         public void fillLabels()
@@ -159,14 +170,25 @@ namespace CIS153_FinalProject_GroupA
 
             if (gameWinner == 1)
             {
-                winner = "Player";
+                winner = "Player   1";
+                lbl_winner.ForeColor = Color.Red;
                 lbl_winner.Text = winner.ToString();
             }
 
             if (gameWinner == 2)
             {
-                winner = "Computer";
-                lbl_winner.Text = winner.ToString();
+                if (gameSecondPlayer == 0)
+                {
+                    winner = "Computer";
+                    lbl_winner.ForeColor = Color.Yellow;
+                    lbl_winner.Text = winner.ToString();
+                }
+                else if (gameSecondPlayer == 1)
+                {
+                    winner = "Player   2";
+                    lbl_winner.ForeColor = Color.Yellow;
+                    lbl_winner.Text = winner.ToString();
+                }
             }
 
             //lbl_winner.Text = winner.ToString();

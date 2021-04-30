@@ -64,23 +64,10 @@ namespace CIS153_FinalProject_GroupA
             setUpGame();
         }
 
-        private void TwoPlayer_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            loadWelcomeForm();
-        }
-
-        public void loadWelcomeForm()
-        {
-            Welcome formToLoad = new Welcome(this);
-            formToLoad.Show();
-            this.Hide();
-        }
-
         public void loadGameOverForm()
         {
             GameOver formToLoad = new GameOver(this);
-            formToLoad.Show();
-            this.Hide();
+            formToLoad.ShowDialog();
         }
 
         public void WriteToTextGO()
@@ -95,9 +82,6 @@ namespace CIS153_FinalProject_GroupA
             sw.WriteLineAsync(gameWinner + "," + secondPlayerID);
 
             sw.Close();
-
-            this.Close();
-            
         }
 
 
@@ -272,6 +256,8 @@ namespace CIS153_FinalProject_GroupA
                 {
                     txt_turn.Text = "Player 2's Turn";
                     txt_turn.ForeColor = Color.Yellow;
+                    rndbtn_p1.BackColor = Color.LightGray;
+                    rndbtn_p2.BackColor = Color.Yellow;
                     if (gameBoard.getTurn() == 0)
                     {
                         gameBoard.getCell(r, c).setPlayer(1);
@@ -287,6 +273,8 @@ namespace CIS153_FinalProject_GroupA
                     {
                         txt_turn.Text = "Player 1's Turn";
                         txt_turn.ForeColor = Color.Red;
+                        rndbtn_p1.BackColor = Color.Red;
+                        rndbtn_p2.BackColor = Color.LightGray;
                         gameBoard.getCell(r, c).setPlayer(2);
                         gameBoard.getCell(r, c).getButton().BackColor = Color.Yellow;
                         Console.WriteLine("Button Row: " + gameBoard.getCell(r, c).getButton().Name[4]);

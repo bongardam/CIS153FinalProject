@@ -38,24 +38,10 @@ namespace CIS153_FinalProject_GroupA
         {
             welcome = wel;
         }
-
-        private void SinglePlayer_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            loadWelcomeForm();
-        }
-
-        public void loadWelcomeForm()
-        {
-            Welcome formToLoad = new Welcome(this);
-            formToLoad.Show();
-            this.Hide();
-        }
-
         public void loadGameOverForm()
         {
             GameOver formToLoad = new GameOver(this);
-            formToLoad.Show();
-            this.Hide();
+            formToLoad.ShowDialog();
         }
 
         /// THIS MAY BE USED LATER ON
@@ -82,7 +68,7 @@ namespace CIS153_FinalProject_GroupA
             //Find all buttons on the form
             //Be careful becuase if you have other buttons besides the cells (restart, exit, etc) this could cause an issue
             //Might need an if statement to exclude those buttons
-            foreach (var button in this.Controls.OfType<Button>())
+            foreach (var button in this.Controls.OfType<RoundButton>())
             {
                 name = button.Name;
                 posDelim = name.IndexOf(delim);
@@ -100,12 +86,7 @@ namespace CIS153_FinalProject_GroupA
                 // Console.WriteLine(row.ToString(), col.ToString());
                 //add that cell to the gameboard
                 gameBoard.setGameBoardCell(c);
-
-
-
             }
-
-
         }
 
         public void WriteToTextGO()
@@ -120,8 +101,6 @@ namespace CIS153_FinalProject_GroupA
             sw.WriteLineAsync(gameWinner + "," + secondPlayerID);
 
             sw.Close();
-
-            this.Close();
         }
 
         public void WriteToTextStats()
@@ -136,8 +115,6 @@ namespace CIS153_FinalProject_GroupA
             sw.WriteLineAsync(statPlayerOneOutcome + "," + statPlayerOneTie);
 
             sw.Close();
-
-            this.Close();
         }
 
         private void SinglePlayer_Paint(object sender, PaintEventArgs e)
@@ -234,7 +211,7 @@ namespace CIS153_FinalProject_GroupA
 
         }
 
-        private void btn_0_0_Click(object sender, EventArgs e)
+        private void btn_0_0_Click_1(object sender, EventArgs e)
         {
             btn_Click(0);
 
@@ -245,7 +222,7 @@ namespace CIS153_FinalProject_GroupA
             }
         }
 
-        private void btn_0_1_Click(object sender, EventArgs e)
+        private void btn_0_1_Click_1(object sender, EventArgs e)
         {
             btn_Click(1);
 
@@ -257,7 +234,7 @@ namespace CIS153_FinalProject_GroupA
             }
         }
 
-        private void btn_0_2_Click(object sender, EventArgs e)
+        private void btn_0_2_Click_1(object sender, EventArgs e)
         {
             btn_Click(2);
 
@@ -269,7 +246,7 @@ namespace CIS153_FinalProject_GroupA
             }
         }
 
-        private void btn_0_3_Click(object sender, EventArgs e)
+        private void btn_0_3_Click_1(object sender, EventArgs e)
         {
             btn_Click(3);
 
@@ -281,7 +258,7 @@ namespace CIS153_FinalProject_GroupA
             }
         }
 
-        private void btn_0_4_Click(object sender, EventArgs e)
+        private void btn_0_4_Click_1(object sender, EventArgs e)
         {
             btn_Click(4);
 
@@ -293,7 +270,7 @@ namespace CIS153_FinalProject_GroupA
             }
         }
 
-        private void btn_0_5_Click(object sender, EventArgs e)
+        private void btn_0_5_Click_1(object sender, EventArgs e)
         {
             btn_Click(5);
 
@@ -305,7 +282,7 @@ namespace CIS153_FinalProject_GroupA
             }
         }
 
-        private void btn_0_6_Click(object sender, EventArgs e)
+        private void btn_0_6_Click_1(object sender, EventArgs e)
         {
             btn_Click(6);
 
@@ -362,11 +339,6 @@ namespace CIS153_FinalProject_GroupA
                 }
             }
         }
-
-
-
-
-
     }
 
 }

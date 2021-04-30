@@ -142,7 +142,9 @@ namespace CIS153_FinalProject_GroupA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btn_exit;
             this.ClientSize = new System.Drawing.Size(784, 648);
+            this.ControlBox = false;
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_stats);
             this.Controls.Add(this.btn_twoPlayer);

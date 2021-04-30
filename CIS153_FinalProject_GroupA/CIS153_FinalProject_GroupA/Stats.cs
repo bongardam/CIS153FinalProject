@@ -45,13 +45,6 @@ namespace CIS153_FinalProject_GroupA
         
         private void Stats_FormClosing(object sender, FormClosingEventArgs e)
         {
-            loadWelcomeForm();
-        }
-
-        public void loadWelcomeForm()
-        {
-            Welcome formToLoad = new Welcome(this);
-            formToLoad.Show();
             this.Hide();
         }
 
@@ -117,7 +110,9 @@ namespace CIS153_FinalProject_GroupA
 
         private void btn_mainMenu_Click(object sender, EventArgs e)
         {
-            loadWelcomeForm();
+            Welcome wel = new Welcome(this);
+            wel.Show();
+            this.Hide();
         }
     }
 }

@@ -63,9 +63,39 @@ namespace CIS153_FinalProject_GroupA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ai {
+            get {
+                object obj = ResourceManager.GetObject("ai", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Blue_9809_2__2_ {
             get {
                 object obj = ResourceManager.GetObject("Blue-9809-2 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap boltLeft {
+            get {
+                object obj = ResourceManager.GetObject("boltLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap boltRight {
+            get {
+                object obj = ResourceManager.GetObject("boltRight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,7 +186,94 @@ namespace CIS153_FinalProject_GroupA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 0,0,0.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doubleBolt {
+            get {
+                object obj = ResourceManager.GetObject("doubleBolt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doubleBoltAdjust {
+            get {
+                object obj = ResourceManager.GetObject("doubleBoltAdjust", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap doubleBoltSmall {
+            get {
+                object obj = ResourceManager.GetObject("doubleBoltSmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1,0
+        ///1,1
+        ///1,0
+        ///1,1
+        ///2,1
+        ///1,1
+        ///1,1
+        ///0,1
+        ///0,1
+        ///1,0
+        ///2,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///2,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///2,1
+        ///2,1
+        ///1,1
+        ///2,0
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///1,1
+        ///2,0
+        ///.
         /// </summary>
         internal static string GameOverStats {
             get {
@@ -175,13 +292,19 @@ namespace CIS153_FinalProject_GroupA.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 0,0,1,0
-        ///0,0,0,1
-        ///0,0,1,0
-        ///0,0,0,0
-        ///0,0,1,0
-        ///0,0,0,1
-        ///0,0,1,0.
+        ///   Looks up a localized string similar to 1,0
+        ///1,0
+        ///0,1
+        ///0,0
+        ///1,0
+        ///1,0
+        ///1,0
+        ///0,0
+        ///0,11,0
+        ///1,0
+        ///2,0
+        ///2,0
+        ///.
         /// </summary>
         internal static string PlayerOneStats {
             get {
@@ -224,6 +347,66 @@ namespace CIS153_FinalProject_GroupA.Properties {
         internal static System.Drawing.Bitmap theboard {
             get {
                 object obj = ResourceManager.GetObject("theboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user1 {
+            get {
+                object obj = ResourceManager.GetObject("user1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vectorstock_31016476 {
+            get {
+                object obj = ResourceManager.GetObject("vectorstock_31016476", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap versus {
+            get {
+                object obj = ResourceManager.GetObject("versus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap versusAdjust {
+            get {
+                object obj = ResourceManager.GetObject("versusAdjust", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap versusSmall {
+            get {
+                object obj = ResourceManager.GetObject("versusSmall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

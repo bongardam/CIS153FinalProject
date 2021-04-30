@@ -118,52 +118,88 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="connect4logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\connect4logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PlayerTwoStats" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlayerTwoStats.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="Multiplayer75Pixels" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Multiplayer75Pixels.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Blue-9809-2 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Blue-9809-2 (2).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="boltRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boltRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="connect4logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\connect4logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="connect4RESIZE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\connect4RESIZE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PlayerTwoStats" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerTwoStats.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
-  <data name="PlayerOneStats" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlayerOneStats.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  <data name="vectorstock_31016476" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vectorstock_31016476.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="doubleBoltAdjust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doubleBoltAdjust.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="research" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\research.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="connect4logo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\connect4logo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="connect4logoRESIZE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connect4logoRESIZE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="connect4logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\connect4logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="connect4logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connect4logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlayerOneStats" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerOneStats.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="CompStats" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CompStats.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ai" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ai.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="doubleBolt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doubleBolt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Multiplayer75Pixels" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Multiplayer75Pixels.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="connect4logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connect4logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="versusSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\versusSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="versus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\versus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="singleplayerOPTION2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\singleplayerOPTION2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boltLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\boltLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GameOverStats" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GameOverStats.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="connect4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\connect4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="connect4logoRESIZE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\connect4logoRESIZE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="theboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\theboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GameOverStats" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameOverStats.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  <data name="doubleBoltSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doubleBoltSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="connect4RESIZE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connect4RESIZE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="connect4logo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\connect4logo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blue-9809-2 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue-9809-2 (2).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="versusAdjust" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\versusAdjust.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

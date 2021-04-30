@@ -60,6 +60,9 @@
     <Compile Include="RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RoundButtonPlayers.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Stats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +185,42 @@
     <None Include="Resources\GameOverStats.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vectorstock_31016476.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boltLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boltRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doubleBolt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doubleBoltSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doubleBoltAdjust.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\versus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\versusSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\versusAdjust.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
