@@ -79,6 +79,7 @@ namespace CIS153_FinalProject_GroupA
             this.rndbtn_p1 = new CIS153_FinalProject_GroupA.RoundButtonPlayers();
             this.rndbtn_ai = new CIS153_FinalProject_GroupA.RoundButtonPlayers();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictBox_board)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictBox_bolts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -617,6 +618,18 @@ namespace CIS153_FinalProject_GroupA
             this.pictureBox1.TabIndex = 154;
             this.pictureBox1.TabStop = false;
             // 
+            // btn_exit
+            // 
+            this.btn_exit.BackColor = System.Drawing.Color.Red;
+            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_exit.Location = new System.Drawing.Point(716, 1);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(34, 31);
+            this.btn_exit.TabIndex = 161;
+            this.btn_exit.Text = "X";
+            this.btn_exit.UseVisualStyleBackColor = false;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
+            // 
             // SinglePlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -624,6 +637,7 @@ namespace CIS153_FinalProject_GroupA
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(751, 751);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_5_6);
             this.Controls.Add(this.btn_5_5);
@@ -730,5 +744,6 @@ namespace CIS153_FinalProject_GroupA
         private RoundButtonPlayers rndbtn_p1;
         private RoundButtonPlayers rndbtn_ai;
         private PictureBox pictureBox1;
+        private Button btn_exit;
     }
 }

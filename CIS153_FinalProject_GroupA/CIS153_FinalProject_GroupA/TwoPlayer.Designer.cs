@@ -76,6 +76,7 @@
             this.btn_0_0 = new CIS153_FinalProject_GroupA.RoundButton();
             this.rndbtn_p1 = new CIS153_FinalProject_GroupA.RoundButtonPlayers();
             this.rndbtn_p2 = new CIS153_FinalProject_GroupA.RoundButtonPlayers();
+            this.btn_exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictBox_board)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictBox_versus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictBox_bolts)).BeginInit();
@@ -611,8 +612,8 @@
             // 
             this.rndbtn_p2.BackColor = System.Drawing.Color.LightGray;
             this.rndbtn_p2.FlatAppearance.BorderSize = 0;
-            this.rndbtn_p2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.rndbtn_p2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
+            this.rndbtn_p2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.rndbtn_p2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.rndbtn_p2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rndbtn_p2.Font = new System.Drawing.Font("Valken", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rndbtn_p2.Image = global::CIS153_FinalProject_GroupA.Properties.Resources.user;
@@ -625,6 +626,18 @@
             this.rndbtn_p2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.rndbtn_p2.UseVisualStyleBackColor = false;
             // 
+            // btn_exit
+            // 
+            this.btn_exit.BackColor = System.Drawing.Color.Red;
+            this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_exit.Location = new System.Drawing.Point(716, 1);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(34, 31);
+            this.btn_exit.TabIndex = 160;
+            this.btn_exit.Text = "X";
+            this.btn_exit.UseVisualStyleBackColor = false;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
+            // 
             // TwoPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -632,6 +645,7 @@
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(751, 751);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_5_6);
             this.Controls.Add(this.btn_5_5);
             this.Controls.Add(this.btn_5_4);
@@ -741,5 +755,6 @@
         private RoundButtonPlayers rndbtn_p1;
         private RoundButtonPlayers rndbtn_p2;
         private System.Windows.Forms.PictureBox pictBox_bolts;
+        private System.Windows.Forms.Button btn_exit;
     }
 }

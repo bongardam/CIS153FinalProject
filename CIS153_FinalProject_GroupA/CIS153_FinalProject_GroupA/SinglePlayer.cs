@@ -339,6 +339,11 @@ namespace CIS153_FinalProject_GroupA
                 }
             }
         }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
+        }
     }
 
 }

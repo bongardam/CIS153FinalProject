@@ -258,6 +258,10 @@ namespace CIS153_FinalProject_GroupA
                     txt_turn.ForeColor = Color.Yellow;
                     rndbtn_p1.BackColor = Color.LightGray;
                     rndbtn_p2.BackColor = Color.Yellow;
+                    rndbtn_p2.FlatAppearance.MouseDownBackColor = Color.Yellow;
+                    rndbtn_p2.FlatAppearance.MouseOverBackColor = Color.Yellow;
+                    rndbtn_p1.FlatAppearance.MouseDownBackColor = Color.LightGray;
+                    rndbtn_p1.FlatAppearance.MouseOverBackColor = Color.LightGray;
                     if (gameBoard.getTurn() == 0)
                     {
                         gameBoard.getCell(r, c).setPlayer(1);
@@ -275,6 +279,10 @@ namespace CIS153_FinalProject_GroupA
                         txt_turn.ForeColor = Color.Red;
                         rndbtn_p1.BackColor = Color.Red;
                         rndbtn_p2.BackColor = Color.LightGray;
+                        rndbtn_p2.FlatAppearance.MouseDownBackColor = Color.LightGray;
+                        rndbtn_p2.FlatAppearance.MouseOverBackColor = Color.LightGray;
+                        rndbtn_p1.FlatAppearance.MouseDownBackColor = Color.Red;
+                        rndbtn_p1.FlatAppearance.MouseOverBackColor = Color.Red;
                         gameBoard.getCell(r, c).setPlayer(2);
                         gameBoard.getCell(r, c).getButton().BackColor = Color.Yellow;
                         Console.WriteLine("Button Row: " + gameBoard.getCell(r, c).getButton().Name[4]);
@@ -348,6 +356,11 @@ namespace CIS153_FinalProject_GroupA
             {
                 gameBoard.getCell(r, c).getButton().Enabled = false;
             }
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(1);
         }
     }
 
