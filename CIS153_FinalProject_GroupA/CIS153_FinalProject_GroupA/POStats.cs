@@ -9,7 +9,7 @@ namespace CIS153_FinalProject_GroupA
     public class POStats
     {
         //int playerOneMoves;        
-        int playerOneOutcome;
+        static int playerOneOutcome;
         int playerOneTie;
         
 
@@ -18,6 +18,10 @@ namespace CIS153_FinalProject_GroupA
             //playerOneMoves = pm;
             playerOneOutcome = po;
             playerOneTie = pt;
+            if (playerOneOutcome == 2)
+            {
+
+            }
         }
 
         //public int getPlayerOneMoves()
@@ -27,7 +31,13 @@ namespace CIS153_FinalProject_GroupA
 
         public int getPlayerOneOutcome()
         {
-            return playerOneOutcome;
+            if (playerOneOutcome == 2)
+            {
+                playerOneOutcome = 0;
+                return playerOneOutcome;
+            }
+
+            return playerOneOutcome++;
         }
 
         public int getPlayerOneTie()

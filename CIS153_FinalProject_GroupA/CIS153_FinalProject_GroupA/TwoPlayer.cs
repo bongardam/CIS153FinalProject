@@ -25,7 +25,7 @@ namespace CIS153_FinalProject_GroupA
         private Cell cell;
         //private GameOverStats gameOverStats;
         //List<GameOverStats> GameOverList = new List<GameOverStats>();
-        
+
 
         bool column0Full = false;
         bool column1Full = false;
@@ -39,7 +39,7 @@ namespace CIS153_FinalProject_GroupA
             InitializeComponent();
             gameBoard = new Board();
             setUpGame();
-   
+
         }
 
         public new void CenterToScreen()
@@ -114,11 +114,11 @@ namespace CIS153_FinalProject_GroupA
 
                 //create a new cell
                 c = new Cell(row, col, button);
-               // Console.WriteLine(row.ToString(), col.ToString());
+                // Console.WriteLine(row.ToString(), col.ToString());
                 //add that cell to the gameboard
                 gameBoard.setGameBoardCell(c);
 
- 
+
 
             }
 
@@ -126,7 +126,7 @@ namespace CIS153_FinalProject_GroupA
         }
 
 
-       
+
 
 
 
@@ -267,8 +267,7 @@ namespace CIS153_FinalProject_GroupA
                         gameBoard.getCell(r, c).setPlayer(1);
                         gameBoard.getCell(r, c).getButton().BackColor = Color.Red;
                         Console.WriteLine("Button Row: " + gameBoard.getCell(r, c).getButton().Name[4]);
-
-                        if(r == 0)
+                        if (r == 0)
                         {
                             columnFull(c);
                         }
@@ -311,44 +310,67 @@ namespace CIS153_FinalProject_GroupA
 
         }
 
+        private void btn_Hover(int c)
+        {
+            for (int r = gameBoard.getNumRows() - 1; r >= 0; r--)
+            {
+                if (gameBoard.getCell(r, c).getPlayer() == 0)
+                {
+                    gameBoard.getCell(r, c).getButton().BackColor = Color.PaleTurquoise;
+                    break;
+                }
+            }
+        }
+
+        private void btn_Leave(int c)
+        {
+            for (int r = gameBoard.getNumRows() - 1; r >= 0; r--)
+            {
+                if (gameBoard.getCell(r, c).getPlayer() == 0)
+                {
+                    gameBoard.getCell(r, c).getButton().BackColor = Color.CornflowerBlue;
+                    break;
+                }
+            }
+        }
 
         public void columnFull(int c)
         {
-            if( c == 0)
+            if (c == 0)
             {
-                 column0Full = true;
+                column0Full = true;
                 Console.WriteLine("Collumn " + c + " full");
             }
 
             if (c == 1)
             {
-                 column1Full = true;
+                column1Full = true;
                 Console.WriteLine("Collumn " + c + " full");
             }
             if (c == 2)
             {
 
-                 column2Full = true;
+                column2Full = true;
                 Console.WriteLine("Collumn " + c + " full");
             }
             if (c == 3)
             {
-                 column3Full = true;
+                column3Full = true;
                 Console.WriteLine("Collumn " + c + " full");
             }
             if (c == 4)
             {
-                 column4Full = true;
+                column4Full = true;
                 Console.WriteLine("Collumn " + c + " full");
             }
             if (c == 5)
             {
-                 column5Full = true;
+                column5Full = true;
                 Console.WriteLine("Collumn " + c + " full");
             }
             if (c == 6)
             {
-                 column6Full = true;
+                column6Full = true;
                 Console.WriteLine("Collumn " + c + " full");
             }
 
@@ -362,6 +384,75 @@ namespace CIS153_FinalProject_GroupA
         {
             Environment.Exit(1);
         }
-    }
 
+        private void btn_0_0_MouseHover(object sender, EventArgs e)
+        {
+            btn_Hover(0);
+        }
+
+        private void btn_0_1_MouseHover(object sender, EventArgs e)
+        {
+            btn_Hover(1);
+        }
+
+        private void btn_0_2_MouseHover(object sender, EventArgs e)
+        {
+            btn_Hover(2);
+        }
+
+        private void btn_0_3_MouseHover(object sender, EventArgs e)
+        {
+            btn_Hover(3);
+        }
+
+        private void btn_0_4_MouseHover(object sender, EventArgs e)
+        {
+            btn_Hover(4);
+        }
+
+        private void btn_0_5_MouseHover(object sender, EventArgs e)
+        {
+            btn_Hover(5);
+        }
+
+        private void btn_0_6_MouseHover(object sender, EventArgs e)
+        {
+            btn_Hover(6);
+        }
+
+        private void btn_0_0_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Leave(0);
+        }
+
+        private void btn_0_1_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Leave(1);
+        }
+
+        private void btn_0_2_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Leave(2);
+        }
+
+        private void btn_0_3_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Leave(3);
+        }
+
+        private void btn_0_4_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Leave(4);
+        }
+
+        private void btn_0_5_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Leave(5);
+        }
+
+        private void btn_0_6_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Leave(6);
+        }
+    }
 }

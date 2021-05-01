@@ -98,7 +98,7 @@ namespace CIS153_FinalProject_GroupA
             int count = playerOneStats.Count;
             int POWins = playerOneStats.Sum(item => item.getPlayerOneOutcome());
             int POTies = playerOneStats.Sum(item => item.getPlayerOneTie());
-            int PCWins = playerOneStats.Count - POWins;
+            //int PCWins = playerOneStats.Count - POWins;
             double POPercent = ((float)POWins / count) * 100;
 
 

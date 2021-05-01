@@ -182,7 +182,7 @@ namespace CIS153_FinalProject_GroupA
                         }
                         else
                         {
-                            gameBoard.getCell(r, c).setPlayer(2);
+                            gameBoard.getCell(r, c).setPlayer(0);
                             gameBoard.getCell(r, c).getButton().BackColor = Color.Yellow;
                             Console.WriteLine("Button Row: " + gameBoard.getCell(r, c).getButton().Name[4]);
                         }
@@ -333,7 +333,7 @@ namespace CIS153_FinalProject_GroupA
                     {
                         b.BackColor = Color.Red;
                     }
-                    if (p == 2)
+                    else if (p == 2)
                     {
                         Console.WriteLine("Yellow Placed");
                         b.BackColor = Color.Yellow;
@@ -346,6 +346,100 @@ namespace CIS153_FinalProject_GroupA
         private void btn_exit_Click(object sender, EventArgs e)
         {
             Environment.Exit(1);
+        }
+
+        private void btn_Hover(int c)
+        {
+            for (int r = gameBoard.getNumRows() - 1; r >= 0; r--)
+            {
+                if (gameBoard.getCell(r, c).getPlayer() == 0)
+                {
+                    gameBoard.getCell(r, c).getButton().BackColor = Color.PaleTurquoise;
+                    break;
+                }
+            }
+        }
+
+        private void btn_0_0_MouseHover(object sender, EventArgs e)
+        {
+            btn_Hover(0);
+        }
+
+        private void btn_0_1_MouseHover(object sender, EventArgs e)
+        {
+            btn_Hover(1);
+        }
+
+        private void btn_0_2_MouseHover(object sender, EventArgs e)
+        {
+            btn_Hover(2);
+        }
+
+        private void btn_0_3_MouseHover(object sender, EventArgs e)
+        {
+            btn_Hover(3);
+        }
+
+        private void btn_0_4_MouseHover(object sender, EventArgs e)
+        {
+            btn_Hover(4);
+        }
+
+        private void btn_0_5_MouseHover(object sender, EventArgs e)
+        {
+            btn_Hover(5);
+        }
+
+        private void btn_0_6_MouseHover(object sender, EventArgs e)
+        {
+            btn_Hover(6);
+        }
+
+        private void btn_Leave(int c)
+        {
+            for (int r = gameBoard.getNumRows() - 1; r >= 0; r--)
+            {
+                if (gameBoard.getCell(r, c).getPlayer() == 0)
+                {
+                    gameBoard.getCell(r, c).getButton().BackColor = Color.CornflowerBlue;
+                    break;
+                }
+            }
+        }
+
+        private void btn_0_0_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Leave(0);
+        }
+
+        private void btn_0_1_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Leave(1);
+        }
+
+        private void btn_0_2_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Leave(2);
+        }
+
+        private void btn_0_3_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Leave(3);
+        }
+
+        private void btn_0_4_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Leave(4);
+        }
+
+        private void btn_0_5_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Leave(5);
+        }
+
+        private void btn_0_6_MouseLeave(object sender, EventArgs e)
+        {
+            btn_Leave(6);
         }
     }
 
